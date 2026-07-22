@@ -77,7 +77,7 @@ export function About() {
                     <span key={idx} className="block">{line}</span>
                   )) : s.v}
                 </div>
-                <div className="text-[clamp(0.625rem,1.5vw,0.75rem)] uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug min-w-0 break-words">
+                <div className="text-[clamp(0.5625rem,1.5vw,0.75rem)] uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug min-w-0 break-words">
                   {s.l.map((line, idx) => (
                     <span key={idx} className="block">{line}</span>
                   ))}
