@@ -73,7 +73,7 @@ export function About() {
                 className="bg-background p-6 md:p-8"
               >
                 <div className="font-display text-4xl md:text-5xl font-extralight text-aqua">
-                  {typeof s.v === "string" ? s.v : <Counter value={s.v} suffix={s.suffix} />}
+                  {typeof s.v === "string" ? s.v : <Counter value={s.v} />}
                 </div>
                 <div className="text-xs uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug">
                   {s.l.map((line, idx) => (
