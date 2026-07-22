@@ -50,9 +50,9 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a href="#projetos" className="group relative px-10 py-4 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-medium overflow-hidden">
-              <span className="relative z-10">Ver Projetos</span>
+              <span className="relative z-10">Ver Soluções</span>
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-medium">Ver Projetos</span>
+              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-medium">Ver Soluções</span>
             </a>
           </div>
         </motion.div>
