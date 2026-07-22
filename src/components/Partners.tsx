@@ -18,10 +18,10 @@ export function Partners() {
         className="max-w-3xl mb-16"
       >
         <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-aqua" />Parceiro Estratégico
+          <span className="w-8 h-px bg-aqua" />Principais Soluções
         </div>
         <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance">
-          Tecnologia aplicada em <span className="italic text-aqua">sistemas críticos.</span>
+          Tubos PEAD para <span className="italic text-aqua">sistemas críticos.</span>
         </h2>
       </motion.div>
 
@@ -35,10 +35,10 @@ export function Partners() {
         <div className="absolute inset-0 bg-gradient-to-br from-aqua/5 via-transparent to-transparent pointer-events-none" />
         <div className="relative grid md:grid-cols-12 gap-10 md:gap-16 p-10 md:p-16">
           <div className="md:col-span-5 space-y-6">
-            <div className="text-[10px] uppercase tracking-[0.4em] text-aqua">Válvulas Industriais</div>
-            <div className="font-display text-5xl md:text-7xl font-extralight tracking-tight">InterAtiva</div>
+            <div className="text-[10px] uppercase tracking-[0.4em] text-aqua">Linha PEAD · Infraestrutura</div>
+            <div className="font-display text-5xl md:text-7xl font-extralight tracking-tight">Politejo</div>
             <p className="text-foreground/70 leading-relaxed font-light max-w-md">
-              Referência em válvulas industriais aplicadas em sistemas críticos de saneamento e controle de fluxo.
+              Portfólio dedicado a redes de saneamento, adução, drenagem e emissários, com foco em durabilidade e eficiência hídrica.
             </p>
             <div className="w-12 h-px bg-aqua" />
           </div>
