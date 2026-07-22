@@ -31,11 +31,11 @@ export function About() {
           className="md:col-span-5 relative"
         >
           <div className="relative aspect-[3/4] overflow-hidden">
-            <img src={portrait} alt="Flávio Lamounier" className="w-full h-full object-cover" loading="lazy" />
+            <img src={portrait} alt="Politejo — infraestrutura em tubos PEAD" className="w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 border-l-2 border-aqua">
-              <div className="text-aqua text-[9px] md:text-[10px] uppercase tracking-[0.3em] mb-1">Consultor de Grandes Negócios</div>
-              <div className="font-display text-2xl">Flávio Lamounier</div>
+              <div className="text-aqua text-[9px] md:text-[10px] uppercase tracking-[0.3em] mb-1">Tubos PEAD · Saneamento · Infraestrutura</div>
+              <div className="font-display text-2xl">Politejo</div>
             </div>
           </div>
           <div className="absolute -top-4 -right-4 w-32 h-32 border border-aqua/30 -z-10" />
@@ -49,16 +49,16 @@ export function About() {
             viewport={{ once: true }}
           >
             <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-              <span className="w-8 h-px bg-aqua" />Quem é Flávio
+              <span className="w-8 h-px bg-aqua" />Sobre a Politejo
             </div>
             <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance">
-              Mais do que fornecer equipamentos.<br/>
-              <span className="italic text-aqua">Conectar soluções.</span>
+              Infraestrutura hídrica<br/>
+              <span className="italic text-aqua">construída para durar.</span>
             </h2>
             <div className="mt-8 space-y-5 text-foreground/70 text-base md:text-lg font-light leading-relaxed max-w-2xl">
-              <p>Uma trajetória construída dentro de canteiros, estações de tratamento e plantas industriais — onde decisões técnicas precisam permanecer por décadas.</p>
-              <p>Participação direta em projetos que abastecem milhões de pessoas, atravessam canais, conectam cidades e sustentam operações críticas em ambientes farmacêuticos e industriais.</p>
-              <p>Relacionamento técnico, escuta de campo e especificação correta — o ponto de encontro entre engenharia, fabricante e obra.</p>
+              <p>Referência nacional na produção e extrusão de tubos em PEAD para infraestrutura, saneamento e sistemas críticos de transporte de água, esgoto e outros recursos essenciais.</p>
+              <p>Soluções desenvolvidas para grandes demandas operacionais, com foco em longa vida útil, confiabilidade das redes e redução de intervenções ao longo do ciclo dos sistemas.</p>
+              <p>Tecnologia aplicada a redes que sustentam cidades — do coletor de esgoto à adutora de larga escala — com o rigor técnico que projetos de longo prazo exigem.</p>
             </div>
           </motion.div>
 
