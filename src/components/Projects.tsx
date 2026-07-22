@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sao from "@/assets/project-saolourenco.jpg";
 import guandu from "@/assets/project-guandu.jpg";
-import saoVideo from "@/assets/eta-saolourenco.mp4.asset.json";
 import guanduVideo from "@/assets/eta-guandu.mp4.asset.json";
 
 type P = {
@@ -11,6 +10,7 @@ type P = {
   loc: string;
   img: string;
   video?: string;
+  previewVimeoId?: string;
   demoVimeoId?: string;
   headline: string;
   body: string;
@@ -18,10 +18,10 @@ type P = {
 };
 
 const projects: P[] = [
-  { n: "01", title: "ETA São Lourenço", loc: "São Paulo · SP", img: sao, video: saoVideo.url, demoVimeoId: "1211509853",
-    headline: "Tubos PEAD em uma das maiores obras de saneamento do Brasil.",
-    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica que exige tubulações preparadas para operar de forma contínua ao longo de décadas.",
-    tags: ["PEAD", "Adução", "Saneamento", "Larga Escala"] },
+  { n: "01", title: "Subadutora Cubatão", loc: "Santos / Cubatão · SP", img: sao, previewVimeoId: "1211900787", demoVimeoId: "1211900787",
+    headline: "Travessia subaquática em PEAD para reforçar a segurança hídrica na Baixada Santista.",
+    body: "Projeto executado com MND (Método Não Destrutivo), utilizando tubulações lisas em PEAD azul instaladas sob o leito do mar e do Canal do Porto de Santos, sem a necessidade de intervenções destrutivas nas vias urbanas. A solução amplia a estabilidade e a segurança hídrica para quase meio milhão de moradores e turistas da região. Fornecemos 100% da tubulação do trecho, com mais de 5.000 metros lineares e mais de 100 carretas entregues em tempo recorde, garantindo agilidade logística e suporte a uma obra estratégica para o abastecimento regional.",
+    tags: ["PEAD", "MND", "Travessia Subaquática", "Segurança Hídrica"] },
   { n: "02", title: "ETA Guandu", loc: "Rio de Janeiro · RJ", img: guandu, video: guanduVideo.url, demoVimeoId: "1211510047",
     headline: "Escala monumental em um dos sistemas hídricos mais importantes do país.",
     body: "Referência de infraestrutura de tratamento e distribuição de água potável, onde durabilidade e confiabilidade das redes são requisitos operacionais permanentes.",
@@ -48,7 +48,16 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
             onKeyDown={hasDemo ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenDemo(p.demoVimeoId!, p.title); } } : undefined}
             aria-label={hasDemo ? `Ver demonstração de ${p.title}` : undefined}
           >
-            {p.video ? (
+            {p.previewVimeoId ? (
+              <iframe
+                src={`https://player.vimeo.com/video/${p.previewVimeoId}?background=1&autoplay=1&muted=1&loop=1&autopause=0&playsinline=1&title=0&byline=0&portrait=0&controls=0`}
+                className={`absolute inset-0 w-full h-full pointer-events-none transition-all duration-[400ms] ${hasDemo ? "group-hover:brightness-105 group-hover:scale-[1.01]" : ""}`}
+                style={{ border: 0 }}
+                allow="autoplay; fullscreen; picture-in-picture"
+                title={p.title}
+                loading="lazy"
+              />
+            ) : p.video ? (
               <video
                 src={p.video}
                 className={`w-full h-full object-cover transition-all duration-[400ms] ${hasDemo ? "group-hover:brightness-105 group-hover:scale-[1.01]" : ""}`}
@@ -105,7 +114,16 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
 }
 
 export function Projects() {
-  const [demo, setDemo] = useState<{ vimeoId: string; title: string } | null>(null);
+  const [demo, setDemo] = useState<{ vimeoId: string; title: string; loc: string } | null>(null);
+
+  useEffect(() => {
+    if (!demo) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setDemo(null); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", onKey); };
+  }, [demo]);
 
   return (
     <section id="projetos" className="relative bg-deep grain">
@@ -126,7 +144,7 @@ export function Projects() {
         </motion.div>
       </div>
       {projects.map((p, i) => (
-        <ProjectPanel key={p.n} p={p} idx={i} onOpenDemo={(vimeoId, title) => setDemo({ vimeoId, title })} />
+        <ProjectPanel key={p.n} p={p} idx={i} onOpenDemo={(vimeoId, title) => setDemo({ vimeoId, title, loc: p.loc })} />
       ))}
 
       <AnimatePresence>
@@ -151,7 +169,7 @@ export function Projects() {
                 style={{ aspectRatio: "9 / 16", width: "min(100%, calc(85vh * 9 / 16))" }}
               >
                 <iframe
-                  src={`https://player.vimeo.com/video/${demo.vimeoId}?autoplay=1`}
+                  src={`https://player.vimeo.com/video/${demo.vimeoId}?autoplay=1&muted=0&controls=1&autopause=0&playsinline=1`}
                   className="absolute inset-0 w-full h-full"
                   frameBorder={0}
                   allow="autoplay; fullscreen; picture-in-picture"
@@ -163,6 +181,7 @@ export function Projects() {
                 <div>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">Demonstração</div>
                   <div className="font-display text-xl mt-1">{demo.title}</div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-foreground/50 mt-1">{demo.loc}</div>
                 </div>
                 <button
                   onClick={() => setDemo(null)}
