@@ -101,7 +101,10 @@
   .scrim-hero-vignette { background: radial-gradient(ellipse at center, transparent 35%, oklch(0.08 0.018 162 / 0.75) 100%); }
   .glow-aqua { box-shadow: var(--shadow-glow); }
   .text-aqua { color: var(--aqua); }
+  .text-aqua-deep { color: var(--aqua-deep); }
   .border-aqua { border-color: var(--aqua); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .section-divider { border-top: 1px solid oklch(0.26 0.038 158 / 0.08); }
   .grain {
     position: relative;
   }
