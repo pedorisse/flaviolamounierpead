@@ -1,8 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import valve from "@/assets/valve-borboleta.mp4.asset.json";
 import presenter from "@/assets/flavio-visita.mp4.asset.json";
-
+import tecnologia from "@/assets/tecnologia-infraestrutura.mp4.asset.json";
 
 const filters = [
   "Todos",
@@ -11,8 +10,10 @@ const filters = [
 ] as const;
 type F = typeof filters[number];
 
-const items: { id: number; title: string; subtitle: string; cat: F[]; src: string }[] = [
-  { id: 1, title: "Desempenho dos tubos em PEAD", subtitle: "Comportamento mecânico e vida útil em redes de infraestrutura", cat: ["Tubos PEAD"], src: valve.url },
+type Item = { id: number; title: string; subtitle: string; cat: F[]; tags?: string[]; src: string };
+
+const items: Item[] = [
+  { id: 1, title: "Redes adutoras em PEAD", subtitle: "TRANSPORTE DE ÁGUA EM GRANDES DISTÂNCIAS", cat: ["Tubos PEAD"], tags: ["ADUÇÃO", "PEAD", "GRANDE ESCALA"], src: tecnologia.url },
   { id: 2, title: "Aplicações em ETA e ETE", subtitle: "Tubulações em sistemas de abastecimento e tratamento de esgoto", cat: ["Saneamento", "Tubos PEAD"], src: "/media/drone-leve.mp4" },
   { id: 3, title: "Redes em campo e obra", subtitle: "Instalação e operação de PEAD em grandes projetos de saneamento", cat: ["Saneamento", "Tubos PEAD"], src: presenter.url },
 ];
@@ -79,7 +80,7 @@ export function Knowledge() {
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">{it.subtitle}</div>
                   <div className="font-display text-xl md:text-2xl font-extralight leading-tight">{it.title}</div>
                   <div className="flex flex-wrap gap-1.5 pt-2">
-                    {it.cat.slice(0, 2).map((c) => (
+                    {(it.tags || it.cat.slice(0, 2)).map((c) => (
                       <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-foreground/50 border border-border px-2 py-0.5">
                         {c}
                       </span>
