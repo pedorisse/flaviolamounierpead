@@ -48,7 +48,16 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
             onKeyDown={hasDemo ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenDemo(p.demoVimeoId!, p.title); } } : undefined}
             aria-label={hasDemo ? `Ver demonstração de ${p.title}` : undefined}
           >
-            {p.video ? (
+            {p.previewVimeoId ? (
+              <iframe
+                src={`https://player.vimeo.com/video/${p.previewVimeoId}?background=1&autoplay=1&muted=1&loop=1&autopause=0&playsinline=1&title=0&byline=0&portrait=0&controls=0`}
+                className={`absolute inset-0 w-full h-full pointer-events-none transition-all duration-[400ms] ${hasDemo ? "group-hover:brightness-105 group-hover:scale-[1.01]" : ""}`}
+                style={{ border: 0 }}
+                allow="autoplay; fullscreen; picture-in-picture"
+                title={p.title}
+                loading="lazy"
+              />
+            ) : p.video ? (
               <video
                 src={p.video}
                 className={`w-full h-full object-cover transition-all duration-[400ms] ${hasDemo ? "group-hover:brightness-105 group-hover:scale-[1.01]" : ""}`}
