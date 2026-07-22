@@ -81,7 +81,7 @@ export function Knowledge() {
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">{it.subtitle}</div>
                   <div className="font-display text-xl md:text-2xl font-extralight leading-tight">{it.title}</div>
                   <div className="flex flex-wrap gap-1.5 pt-2">
-                    {it.cat.slice(0, 2).map((c) => (
+                    {(it.tags || it.cat.slice(0, 2)).map((c) => (
                       <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-foreground/50 border border-border px-2 py-0.5">
                         {c}
                       </span>
