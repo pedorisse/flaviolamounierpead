@@ -35,25 +35,27 @@
   --foreground: oklch(0.98 0.005 240);
   --card: oklch(0.16 0.025 250);
   --card-foreground: oklch(0.98 0.005 240);
-  --primary: oklch(0.72 0.16 235);
+  --primary: oklch(0.72 0.18 148);
   --primary-foreground: oklch(0.1 0.02 250);
   --secondary: oklch(0.22 0.03 250);
   --secondary-foreground: oklch(0.98 0.005 240);
   --muted: oklch(0.2 0.025 250);
   --muted-foreground: oklch(0.7 0.02 240);
-  --accent: oklch(0.55 0.18 230);
+  --accent: oklch(0.6 0.19 148);
   --accent-foreground: oklch(0.98 0.005 240);
   --border: oklch(1 0 0 / 8%);
-  --ring: oklch(0.72 0.16 235);
+  --ring: oklch(0.72 0.18 148);
 
-  --aqua: oklch(0.72 0.16 235);
-  --aqua-glow: oklch(0.78 0.2 230);
+  /* Brand accent — Politejo institutional green.
+     Token names kept (--aqua*) so every existing component swaps globally. */
+  --aqua: oklch(0.72 0.18 148);
+  --aqua-glow: oklch(0.8 0.2 148);
   --graphite: oklch(0.13 0.02 250);
   --steel: oklch(0.55 0.02 245);
 
-  --gradient-deep: radial-gradient(ellipse at top, oklch(0.2 0.05 250) 0%, oklch(0.08 0.015 250) 70%);
-  --gradient-aqua: linear-gradient(135deg, oklch(0.55 0.18 230), oklch(0.78 0.2 220));
-  --shadow-glow: 0 0 60px -10px oklch(0.72 0.16 235 / 0.45);
+  --gradient-deep: radial-gradient(ellipse at top, oklch(0.2 0.04 200) 0%, oklch(0.08 0.015 240) 70%);
+  --gradient-aqua: linear-gradient(135deg, oklch(0.6 0.19 148), oklch(0.8 0.2 145));
+  --shadow-glow: 0 0 60px -10px oklch(0.72 0.18 148 / 0.45);
   --shadow-card: 0 30px 80px -30px oklch(0 0 0 / 0.8);
 }
 
