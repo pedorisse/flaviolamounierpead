@@ -19,13 +19,13 @@ type P = {
 
 const projects: P[] = [
   { n: "01", title: "ETA São Lourenço", loc: "São Paulo · SP", img: sao, video: saoVideo.url, demoVimeoId: "1211509853",
-    headline: "Uma das maiores obras de saneamento da história do Brasil.",
-    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica operando continuamente.",
-    tags: ["Saneamento", "Captação", "Tratamento", "Distribuição"] },
+    headline: "Tubos PEAD em uma das maiores obras de saneamento do Brasil.",
+    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica que exige tubulações preparadas para operar de forma contínua ao longo de décadas.",
+    tags: ["PEAD", "Adução", "Saneamento", "Larga Escala"] },
   { n: "02", title: "ETA Guandu", loc: "Rio de Janeiro · RJ", img: guandu, video: guanduVideo.url, demoVimeoId: "1211510047",
-    headline: "A maior estação de tratamento de água potável do mundo.",
-    body: "Escala monumental e controle operacional em um dos sistemas hídricos mais importantes do planeta.",
-    tags: ["Tratamento", "Escala", "Confiabilidade"] },
+    headline: "Escala monumental em um dos sistemas hídricos mais importantes do país.",
+    body: "Referência de infraestrutura de tratamento e distribuição de água potável, onde durabilidade e confiabilidade das redes são requisitos operacionais permanentes.",
+    tags: ["Tratamento", "Distribuição", "Confiabilidade"] },
 ];
 
 function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (vimeoId: string, title: string) => void }) {
@@ -118,10 +118,10 @@ export function Projects() {
           className="max-w-3xl"
         >
           <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-aqua" />Trajetória
+            <span className="w-8 h-px bg-aqua" />Presença em Grandes Obras
           </div>
           <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance">
-            Obras que <span className="italic text-aqua">marcaram</span> minha trajetória.
+            Infraestrutura que <span className="italic text-aqua">sustenta</span> o Brasil.
           </h2>
         </motion.div>
       </div>

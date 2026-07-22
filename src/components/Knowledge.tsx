@@ -6,15 +6,15 @@ import presenter from "@/assets/flavio-visita.mp4.asset.json";
 
 const filters = [
   "Todos",
-  "Válvulas Industriais",
+  "Tubos PEAD",
   "Saneamento",
 ] as const;
 type F = typeof filters[number];
 
 const items: { id: number; title: string; subtitle: string; cat: F[]; src: string }[] = [
-  { id: 1, title: "Funcionamento de válvulas borboleta", subtitle: "Princípios mecânicos aplicados em sistemas de controle de fluxo", cat: ["Válvulas Industriais"], src: valve.url },
-  { id: 2, title: "ETA e ETE na prática", subtitle: "Aplicações em sistemas de abastecimento e tratamento", cat: ["Saneamento", "Válvulas Industriais"], src: "/media/drone-leve.mp4" },
-  { id: 3, title: "Visitas técnicas e operação em campo", subtitle: "Experiência prática em estações de tratamento e grandes sistemas", cat: ["Saneamento", "Válvulas Industriais"], src: presenter.url },
+  { id: 1, title: "Desempenho dos tubos em PEAD", subtitle: "Comportamento mecânico e vida útil em redes de infraestrutura", cat: ["Tubos PEAD"], src: valve.url },
+  { id: 2, title: "Aplicações em ETA e ETE", subtitle: "Tubulações em sistemas de abastecimento e tratamento de esgoto", cat: ["Saneamento", "Tubos PEAD"], src: "/media/drone-leve.mp4" },
+  { id: 3, title: "Redes em campo e obra", subtitle: "Instalação e operação de PEAD em grandes projetos de saneamento", cat: ["Saneamento", "Tubos PEAD"], src: presenter.url },
 ];
 
 export function Knowledge() {
@@ -26,10 +26,10 @@ export function Knowledge() {
     <section className="relative py-32 bg-deep grain overflow-hidden">
       <div className="px-6 md:px-16 max-w-7xl mx-auto mb-12">
         <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-aqua" />Conhecimento de Campo
+          <span className="w-8 h-px bg-aqua" />Conhecimento Técnico
         </div>
         <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance max-w-2xl">
-          Autoridade construída <span className="italic text-aqua">na prática.</span>
+          Engenharia aplicada <span className="italic text-aqua">à rede.</span>
         </h2>
 
         <div className="mt-10 flex flex-wrap gap-2">
