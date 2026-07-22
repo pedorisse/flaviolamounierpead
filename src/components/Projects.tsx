@@ -19,13 +19,13 @@ type P = {
 
 const projects: P[] = [
   { n: "01", title: "ETA São Lourenço", loc: "São Paulo · SP", img: sao, video: saoVideo.url, demoVimeoId: "1211509853",
-    headline: "Uma das maiores obras de saneamento da história do Brasil.",
-    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica operando continuamente.",
-    tags: ["Saneamento", "Captação", "Tratamento", "Distribuição"] },
+    headline: "Tubos PEAD em uma das maiores obras de saneamento do Brasil.",
+    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica que exige tubulações preparadas para operar de forma contínua ao longo de décadas.",
+    tags: ["PEAD", "Adução", "Saneamento", "Larga Escala"] },
   { n: "02", title: "ETA Guandu", loc: "Rio de Janeiro · RJ", img: guandu, video: guanduVideo.url, demoVimeoId: "1211510047",
-    headline: "A maior estação de tratamento de água potável do mundo.",
-    body: "Escala monumental e controle operacional em um dos sistemas hídricos mais importantes do planeta.",
-    tags: ["Tratamento", "Escala", "Confiabilidade"] },
+    headline: "Escala monumental em um dos sistemas hídricos mais importantes do país.",
+    body: "Referência de infraestrutura de tratamento e distribuição de água potável, onde durabilidade e confiabilidade das redes são requisitos operacionais permanentes.",
+    tags: ["Tratamento", "Distribuição", "Confiabilidade"] },
 ];
 
 function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (vimeoId: string, title: string) => void }) {
