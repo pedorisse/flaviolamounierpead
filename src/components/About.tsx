@@ -32,10 +32,10 @@ export function About() {
         >
           <div className="relative aspect-[3/4] overflow-hidden">
             <img src={portrait} alt="Politejo — infraestrutura em tubos PEAD" className="w-full h-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+            <div className="absolute inset-0 scrim-media" />
             <div className="absolute bottom-0 left-0 right-0 p-6 border-l-2 border-aqua">
-              <div className="text-aqua text-[9px] md:text-[10px] uppercase tracking-[0.3em] mb-1">Tubos PEAD · Saneamento · Infraestrutura</div>
-              <div className="font-display text-2xl">Politejo</div>
+              <div className="text-aqua-glow text-[9px] md:text-[10px] uppercase tracking-[0.3em] mb-1">Tubos PEAD · Saneamento · Infraestrutura</div>
+              <div className="font-display text-2xl text-white">Politejo</div>
             </div>
           </div>
           <div className="absolute -top-4 -right-4 w-32 h-32 border border-aqua/30 -z-10" />
@@ -70,7 +70,7 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-background p-6 md:p-8 min-w-0"
+                className="bg-card p-6 md:p-8 min-w-0"
               >
                 <div className="font-display text-[11px] md:text-[17px] lg:text-[24px] xl:text-[30px] font-extralight text-aqua leading-tight min-w-0 break-words">
                   {Array.isArray(s.v) ? s.v.map((line, idx) => (

@@ -25,7 +25,7 @@ export function Knowledge() {
   const filtered = f === "Todos" ? items : items.filter((i) => i.cat.includes(f));
 
   return (
-    <section className="relative py-32 bg-deep grain overflow-hidden">
+    <section className="relative py-32 bg-surface-soft grain overflow-hidden">
       <div className="px-6 md:px-16 max-w-7xl mx-auto mb-12">
         <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
           <span className="w-8 h-px bg-aqua" />Conhecimento Técnico
@@ -63,7 +63,7 @@ export function Knowledge() {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
                 onClick={() => setOpen(it)}
-                className="group relative aspect-[4/5] overflow-hidden bg-card border border-border hover:border-aqua/60 transition-colors text-left"
+                className="group relative aspect-[4/5] overflow-hidden bg-card border border-border hover:border-aqua/60 transition-colors text-left shadow-[0_10px_30px_-15px_var(--shadow-color)]"
               >
                 <video
                   src={it.src}
@@ -71,18 +71,18 @@ export function Knowledge() {
                   playsInline
                   loop
                   autoPlay
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-                <div className="absolute top-4 right-4 w-12 h-12 border border-aqua/60 flex items-center justify-center text-aqua bg-background/30 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 scrim-media" />
+                <div className="absolute top-4 right-4 w-12 h-12 border border-aqua/60 flex items-center justify-center text-aqua bg-white/20 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity">
                   ▶
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2">
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">{it.subtitle}</div>
-                  <div className="font-display text-xl md:text-2xl font-extralight leading-tight">{it.title}</div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-aqua-glow">{it.subtitle}</div>
+                  <div className="font-display text-xl md:text-2xl font-extralight leading-tight text-white">{it.title}</div>
                   <div className="flex flex-wrap gap-1.5 pt-2">
                     {(it.tags || it.cat.slice(0, 2)).map((c) => (
-                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-foreground/50 border border-border px-2 py-0.5">
+                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-white/70 border border-white/20 px-2 py-0.5">
                         {c}
                       </span>
                     ))}
@@ -100,7 +100,7 @@ export function Knowledge() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-background/90 backdrop-blur-md flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 bg-modal-dark backdrop-blur-md flex items-center justify-center p-6"
             onClick={() => setOpen(null)}
           >
             <motion.div
@@ -111,7 +111,7 @@ export function Knowledge() {
               onClick={(e) => e.stopPropagation()}
               className="relative flex flex-col items-center gap-4 max-w-[90vw]"
             >
-              <div className="flex items-center justify-center bg-black border border-aqua/30 overflow-hidden">
+              <div className="flex items-center justify-center bg-surface-dark border border-aqua/30 overflow-hidden">
                 <video
                   src={open.src}
                   controls

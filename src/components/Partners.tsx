@@ -9,7 +9,7 @@ const highlights = [
 
 export function Partners() {
   return (
-    <section className="relative py-32 px-6 md:px-16 max-w-7xl mx-auto">
+    <section className="relative py-32 px-6 md:px-16 max-w-7xl mx-auto bg-card">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export function Partners() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
-        className="relative bg-background border border-border overflow-hidden"
+        className="relative bg-surface-muted border border-border overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-aqua/5 via-transparent to-transparent pointer-events-none" />
         <div className="relative grid md:grid-cols-12 gap-10 md:gap-16 p-10 md:p-16">
@@ -45,7 +45,7 @@ export function Partners() {
 
           <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-border border border-border">
             {highlights.map((h) => (
-              <div key={h.t} className="bg-background p-6 md:p-8 space-y-2">
+              <div key={h.t} className="bg-card p-6 md:p-8 space-y-2">
                 <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">{h.t}</div>
                 <p className="text-foreground/70 text-sm font-light leading-relaxed">{h.d}</p>
               </div>
