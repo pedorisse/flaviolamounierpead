@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import valve from "@/assets/valve-borboleta.mp4.asset.json";
 import presenter from "@/assets/flavio-visita.mp4.asset.json";
-
+import tecnologia from "@/assets/tecnologia-infraestrutura.mp4.asset.json";
 
 const filters = [
   "Todos",
@@ -11,8 +11,10 @@ const filters = [
 ] as const;
 type F = typeof filters[number];
 
-const items: { id: number; title: string; subtitle: string; cat: F[]; src: string }[] = [
-  { id: 1, title: "Desempenho dos tubos em PEAD", subtitle: "Comportamento mecânico e vida útil em redes de infraestrutura", cat: ["Tubos PEAD"], src: valve.url },
+type Item = { id: number; title: string; subtitle: string; cat: F[]; tags?: string[]; src: string };
+
+const items: Item[] = [
+  { id: 1, title: "Redes adutoras em PEAD", subtitle: "TRANSPORTE DE ÁGUA EM GRANDES DISTÂNCIAS", cat: ["Tubos PEAD"], tags: ["ADUÇÃO", "PEAD", "GRANDE ESCALA"], src: tecnologia.url },
   { id: 2, title: "Aplicações em ETA e ETE", subtitle: "Tubulações em sistemas de abastecimento e tratamento de esgoto", cat: ["Saneamento", "Tubos PEAD"], src: "/media/drone-leve.mp4" },
   { id: 3, title: "Redes em campo e obra", subtitle: "Instalação e operação de PEAD em grandes projetos de saneamento", cat: ["Saneamento", "Tubos PEAD"], src: presenter.url },
 ];
