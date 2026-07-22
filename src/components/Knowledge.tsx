@@ -26,10 +26,10 @@ export function Knowledge() {
     <section className="relative py-32 bg-deep grain overflow-hidden">
       <div className="px-6 md:px-16 max-w-7xl mx-auto mb-12">
         <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-aqua" />Conhecimento de Campo
+          <span className="w-8 h-px bg-aqua" />Conhecimento Técnico
         </div>
         <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance max-w-2xl">
-          Autoridade construída <span className="italic text-aqua">na prática.</span>
+          Engenharia aplicada <span className="italic text-aqua">à rede.</span>
         </h2>
 
         <div className="mt-10 flex flex-wrap gap-2">
