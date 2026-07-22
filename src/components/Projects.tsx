@@ -71,8 +71,8 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
             ) : (
               <img src={p.img} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
             )}
-            <div className="absolute inset-0 bg-gradient-to-tr from-background/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-6 left-6 font-display text-7xl md:text-9xl font-extralight text-foreground/90 mix-blend-overlay pointer-events-none">{p.n}</div>
+            <div className="absolute inset-0 scrim-media-soft pointer-events-none" />
+            <div className="absolute top-6 left-6 font-display text-7xl md:text-9xl font-extralight text-white/90 mix-blend-overlay pointer-events-none">{p.n}</div>
 
             {hasDemo && (
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -126,7 +126,7 @@ export function Projects() {
   }, [demo]);
 
   return (
-    <section id="projetos" className="relative bg-deep grain">
+    <section id="projetos" className="relative bg-card">
       <div className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -153,7 +153,7 @@ export function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-background/90 backdrop-blur-md flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 bg-modal-dark backdrop-blur-md flex items-center justify-center p-6"
             onClick={() => setDemo(null)}
           >
             <motion.div
@@ -165,7 +165,7 @@ export function Projects() {
               className="relative flex flex-col items-center gap-4 w-full max-w-[1200px]"
             >
               <div
-                className="relative mx-auto bg-black border border-aqua/30 overflow-hidden"
+                className="relative mx-auto bg-surface-dark border border-aqua/30 overflow-hidden"
                 style={{ aspectRatio: "9 / 16", width: "min(100%, calc(85vh * 9 / 16))" }}
               >
                 <iframe

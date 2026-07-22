@@ -28,42 +28,57 @@
   --color-aqua-glow: var(--aqua-glow);
   --color-graphite: var(--graphite);
   --color-steel: var(--steel);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-dark: var(--surface-dark);
 }
 
 :root {
-  --background: oklch(0.13 0.02 250);
-  --foreground: oklch(0.98 0.005 240);
-  --card: oklch(0.16 0.025 250);
-  --card-foreground: oklch(0.98 0.005 240);
-  --primary: oklch(0.72 0.18 148);
-  --primary-foreground: oklch(0.1 0.02 250);
-  --secondary: oklch(0.22 0.03 250);
-  --secondary-foreground: oklch(0.98 0.005 240);
-  --muted: oklch(0.2 0.025 250);
-  --muted-foreground: oklch(0.7 0.02 240);
-  --accent: oklch(0.6 0.19 148);
-  --accent-foreground: oklch(0.98 0.005 240);
-  --border: oklch(1 0 0 / 8%);
-  --ring: oklch(0.72 0.18 148);
+  /* Politejo — light institutional palette
+     Off-white base, white surfaces, institutional green accents. */
+  --background: oklch(0.973 0.008 128);        /* #F7F8F4 */
+  --foreground: oklch(0.29 0.036 158);         /* #123127 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.29 0.036 158);
+  --primary: oklch(0.55 0.15 150);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.94 0.014 135);
+  --secondary-foreground: oklch(0.29 0.036 158);
+  --muted: oklch(0.96 0.008 135);
+  --muted-foreground: oklch(0.5 0.014 165);    /* #4F615A */
+  --accent: oklch(0.55 0.15 150);
+  --accent-foreground: oklch(1 0 0);
+  --border: oklch(0.29 0.036 158 / 0.14);
+  --ring: oklch(0.55 0.15 150);
 
-  /* Brand accent — Politejo institutional green.
-     Token names kept (--aqua*) so every existing component swaps globally. */
-  --aqua: oklch(0.72 0.18 148);
-  --aqua-glow: oklch(0.8 0.2 148);
-  --graphite: oklch(0.13 0.02 250);
-  --steel: oklch(0.55 0.02 245);
+  /* Brand tokens — kept under original names so components map globally. */
+  --aqua: oklch(0.55 0.15 150);
+  --aqua-glow: oklch(0.65 0.17 150);
+  --aqua-hover: oklch(0.48 0.14 150);
+  --graphite: oklch(0.29 0.036 158);
+  --steel: oklch(0.5 0.014 165);
 
-  --gradient-deep: radial-gradient(ellipse at top, oklch(0.2 0.04 200) 0%, oklch(0.08 0.015 240) 70%);
-  --gradient-aqua: linear-gradient(135deg, oklch(0.6 0.19 148), oklch(0.8 0.2 145));
-  --shadow-glow: 0 0 60px -10px oklch(0.72 0.18 148 / 0.45);
-  --shadow-card: 0 30px 80px -30px oklch(0 0 0 / 0.8);
+  /* Surfaces / alternation */
+  --surface: oklch(1 0 0);
+  --surface-muted: oklch(0.96 0.008 135);      /* #F2F5F0 */
+  --surface-soft: oklch(0.94 0.014 135);       /* #EEF2EB */
+  --surface-dark: oklch(0.18 0.028 162);       /* hero / footer / modal */
+
+  --border-strong: oklch(0.29 0.036 158 / 0.24);
+  --shadow-color: oklch(0.29 0.036 158 / 0.08);
+
+  --gradient-deep: linear-gradient(180deg, oklch(0.98 0.006 130) 0%, oklch(0.94 0.014 135) 100%);
+  --gradient-aqua: linear-gradient(135deg, oklch(0.55 0.15 150), oklch(0.65 0.17 150));
+  --shadow-glow: 0 0 60px -10px oklch(0.55 0.15 150 / 0.35);
+  --shadow-card: 0 20px 50px -20px oklch(0.29 0.036 158 / 0.12);
 }
 
 @layer base {
   * { border-color: var(--color-border); }
   html, body { background: var(--background); color: var(--foreground); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
   body { overflow-x: hidden; }
-  ::selection { background: oklch(0.72 0.18 148 / 0.4); color: white; }
+  ::selection { background: oklch(0.55 0.15 150 / 0.25); color: oklch(0.29 0.036 158); }
 }
 
 @layer utilities {
@@ -71,6 +86,15 @@
   .text-balance { text-wrap: balance; }
   .bg-deep { background: var(--gradient-deep); }
   .bg-aqua-gradient { background: var(--gradient-aqua); }
+  .bg-surface-dark { background: var(--surface-dark); }
+  .bg-surface-soft { background: var(--surface-soft); }
+  .bg-surface-muted { background: var(--surface-muted); }
+  .bg-modal-dark { background: oklch(0.09 0.02 162 / 0.94); }
+  .scrim-media { background: linear-gradient(to top, oklch(0.12 0.028 162) 0%, oklch(0.12 0.028 162 / 0.35) 55%, transparent 100%); }
+  .scrim-media-soft { background: linear-gradient(to top right, oklch(0.12 0.028 162 / 0.55), transparent 70%); }
+  .scrim-hero { background: oklch(0.12 0.028 162 / 0.55); }
+  .scrim-hero-grad { background: linear-gradient(to bottom, oklch(0.09 0.02 162 / 0.7), oklch(0.09 0.02 162 / 0.25), oklch(0.09 0.02 162 / 0.8)); }
+  .scrim-hero-vignette { background: radial-gradient(ellipse at center, transparent 35%, oklch(0.08 0.018 162 / 0.75) 100%); }
   .glow-aqua { box-shadow: var(--shadow-glow); }
   .text-aqua { color: var(--aqua); }
   .border-aqua { border-color: var(--aqua); }
@@ -78,7 +102,7 @@
     position: relative;
   }
   .grain::after {
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:0.04;
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:0.035;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
   .scroll-hint::after {

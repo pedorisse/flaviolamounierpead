@@ -3,10 +3,10 @@ import horizon from "@/assets/horizon-pipe.jpg";
 
 export function FinalCTA() {
   return (
-    <section className="relative h-[100vh] min-h-[700px] w-full overflow-hidden flex items-center justify-center">
-      <img src={horizon} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
-      <div className="absolute inset-0 bg-black/30" />
+    <section className="relative h-[100vh] min-h-[700px] w-full overflow-hidden flex items-center justify-center bg-background">
+      <img src={horizon} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
+      <div className="absolute inset-0 bg-white/10" />
 
       <div className="relative z-10 text-center max-w-5xl px-6 space-y-10 flex flex-col items-center justify-center">
         <motion.h2
@@ -39,9 +39,9 @@ export function FinalCTA() {
         </motion.div>
       </div>
 
-      <footer className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-6 md:px-16 text-[10px] uppercase tracking-[0.4em] text-foreground/40">
+      <footer className="absolute bottom-0 left-0 right-0 bg-surface-dark py-5 px-6 md:px-16 flex flex-wrap gap-3 justify-between items-center text-[10px] uppercase tracking-[0.4em] text-white/60">
         <div>Politejo · Infraestrutura Hídrica</div>
-        <div>PEAD · Saneamento · Sustentabilidade</div>
+        <div className="text-aqua-glow">PEAD · Saneamento · Sustentabilidade</div>
       </footer>
     </section>
   );

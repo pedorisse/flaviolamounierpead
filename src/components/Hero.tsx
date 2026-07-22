@@ -24,10 +24,10 @@ export function Hero() {
         style={{ transform: `scale(1.1) translate(${pos.x * -15}px, ${pos.y * -15}px)` }}
         src={drone.url}
       />
-      {/* Dark overlay for legibility — stronger at edges */}
-      <div className="absolute inset-0 bg-black/55" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.7)_100%)]" />
+      {/* Dark green overlay for legibility — Politejo institutional tint */}
+      <div className="absolute inset-0 scrim-hero" />
+      <div className="absolute inset-0 scrim-hero-grad" />
+      <div className="absolute inset-0 scrim-hero-vignette" />
 
       <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div
@@ -60,7 +60,7 @@ export function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-foreground/40 text-[10px] uppercase tracking-[0.4em] scroll-hint"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-[10px] uppercase tracking-[0.4em] scroll-hint"
       >
         Scroll
       </motion.div>
