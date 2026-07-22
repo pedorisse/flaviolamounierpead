@@ -62,7 +62,7 @@ export function About() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-px bg-border pt-8 mt-12 border-t border-border">
+          <div className="grid grid-cols-2 gap-px bg-border pt-8 mt-12 border-t border-border min-w-0">
             {stats.map((s, i) => (
               <motion.div
                 key={i}
@@ -70,14 +70,16 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-background p-6 md:p-8"
+                className="bg-background p-6 md:p-8 min-w-0"
               >
-                <div className="font-display text-4xl md:text-5xl font-extralight text-aqua">
-                  {typeof s.v === "string" ? s.v : <Counter value={s.v} />}
+                <div className="font-display text-[clamp(0.875rem,2.2vw,1.875rem)] font-extralight text-aqua leading-tight min-w-0 break-words">
+                  {Array.isArray(s.v) ? s.v.map((line, idx) => (
+                    <span key={idx} className="block">{line}</span>
+                  )) : s.v}
                 </div>
-                <div className="text-xs uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug">
+                <div className="text-xs uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug min-w-0 break-words">
                   {s.l.map((line, idx) => (
-                    <span key={idx}>{line}{idx < s.l.length - 1 && <br />}</span>
+                    <span key={idx} className="block">{line}</span>
                   ))}
                 </div>
               </motion.div>
