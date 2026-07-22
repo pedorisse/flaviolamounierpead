@@ -71,8 +71,8 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
             ) : (
               <img src={p.img} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
             )}
-            <div className="absolute inset-0 bg-gradient-to-tr from-background/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-6 left-6 font-display text-7xl md:text-9xl font-extralight text-foreground/90 mix-blend-overlay pointer-events-none">{p.n}</div>
+            <div className="absolute inset-0 scrim-media-soft pointer-events-none" />
+            <div className="absolute top-6 left-6 font-display text-7xl md:text-9xl font-extralight text-white/90 mix-blend-overlay pointer-events-none">{p.n}</div>
 
             {hasDemo && (
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
