@@ -118,10 +118,10 @@ export function Projects() {
           className="max-w-3xl"
         >
           <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-aqua" />Trajetória
+            <span className="w-8 h-px bg-aqua" />Presença em Grandes Obras
           </div>
           <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance">
-            Obras que <span className="italic text-aqua">marcaram</span> minha trajetória.
+            Infraestrutura que <span className="italic text-aqua">sustenta</span> o Brasil.
           </h2>
         </motion.div>
       </div>
