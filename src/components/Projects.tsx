@@ -114,7 +114,16 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
 }
 
 export function Projects() {
-  const [demo, setDemo] = useState<{ vimeoId: string; title: string } | null>(null);
+  const [demo, setDemo] = useState<{ vimeoId: string; title: string; loc: string } | null>(null);
+
+  useEffect(() => {
+    if (!demo) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setDemo(null); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", onKey); };
+  }, [demo]);
 
   return (
     <section id="projetos" className="relative bg-deep grain">
