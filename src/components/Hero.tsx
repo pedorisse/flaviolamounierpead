@@ -60,7 +60,7 @@ export function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-foreground/40 text-[10px] uppercase tracking-[0.4em] scroll-hint"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-[10px] uppercase tracking-[0.4em] scroll-hint"
       >
         Scroll
       </motion.div>
