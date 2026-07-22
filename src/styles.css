@@ -37,45 +37,44 @@
 }
 
 :root {
-  /* Politejo — refined light institutional palette
-     70% branco/off-white · 20% neutros claros · 10% verde institucional */
-  --background: oklch(0.965 0.006 105);        /* #F6F6F2 off-white neutro */
-  --foreground: oklch(0.26 0.038 158);         /* #17332A verde quase preto */
+  /* Politejo — paleta clara com verde institucional mais escuro e marcante */
+  --background: oklch(0.962 0.005 105);        /* #F5F5F1 off-white neutro */
+  --foreground: oklch(0.27 0.04 160);          /* #173126 verde quase preto */
   --card: oklch(1 0 0);                        /* #FFFFFF */
-  --card-foreground: oklch(0.26 0.038 158);
-  --primary: oklch(0.52 0.14 150);             /* verde institucional */
+  --card-foreground: oklch(0.27 0.04 160);
+  --primary: oklch(0.5 0.13 152);              /* #1E7A43 verde institucional forte */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.94 0.006 110);          /* #F0F1ED neutro */
-  --secondary-foreground: oklch(0.32 0.036 158);
-  --muted: oklch(0.94 0.006 110);
-  --muted-foreground: oklch(0.47 0.012 165);   /* #4B5B55 grafite corpo */
-  --accent: oklch(0.52 0.14 150);
+  --secondary: oklch(0.945 0.008 145);         /* #EEF2EC apoio */
+  --secondary-foreground: oklch(0.32 0.05 158);
+  --muted: oklch(0.945 0.008 145);
+  --muted-foreground: oklch(0.44 0.024 165);   /* #42534D grafite corpo */
+  --accent: oklch(0.5 0.13 152);
   --accent-foreground: oklch(1 0 0);
-  --border: oklch(0.26 0.038 158 / 0.12);      /* borda discreta */
-  --ring: oklch(0.52 0.14 150);
+  --border: oklch(0.32 0.08 155 / 0.16);       /* rgba(18,61,42,0.16) */
+  --ring: oklch(0.5 0.13 152);
 
-  /* Brand tokens — mantidos com os mesmos nomes para mapeamento global. */
-  --aqua: oklch(0.52 0.14 150);                /* verde institucional */
-  --aqua-glow: oklch(0.6 0.15 150);            /* variação clara p/ mídia escura */
-  --aqua-hover: oklch(0.44 0.13 150);          /* hover ~8% mais escuro */
-  --aqua-deep: oklch(0.38 0.11 155);           /* verde escuro p/ títulos/loc */
-  --graphite: oklch(0.32 0.036 158);           /* títulos secundários */
-  --steel: oklch(0.47 0.012 165);              /* corpo */
+  /* Brand tokens */
+  --aqua: oklch(0.5 0.13 152);                 /* verde institucional #1E7A43 */
+  --aqua-glow: oklch(0.6 0.14 150);            /* variação clara p/ mídia escura */
+  --aqua-hover: oklch(0.42 0.11 154);          /* hover mais escuro */
+  --aqua-deep: oklch(0.32 0.08 155);           /* #123D2A verde escuro títulos/loc */
+  --graphite: oklch(0.44 0.024 165);           /* #42534D corpo escuro */
+  --steel: oklch(0.55 0.018 170);              /* #60706B labels secundárias */
 
   /* Surfaces / alternação de seções */
   --surface: oklch(1 0 0);                     /* #FFFFFF */
-  --surface-muted: oklch(0.94 0.006 110);      /* #F0F1ED neutro */
-  --surface-soft: oklch(0.93 0.012 145);       /* #EAF1EA verde muito claro */
-  --surface-dark: oklch(0.18 0.028 162);       /* hero / footer / modal */
+  --surface-muted: oklch(0.945 0.008 145);     /* #EEF2EC neutro */
+  --surface-soft: oklch(0.935 0.014 148);      /* #E7EFE8 verde muito claro apoio */
+  --surface-dark: oklch(0.2 0.038 160);        /* #0E2F22 hero / footer / modal */
 
-  --border-strong: oklch(0.26 0.038 158 / 0.2);
-  --shadow-color: oklch(0.26 0.038 158 / 0.05);
+  --border-strong: oklch(0.32 0.08 155 / 0.28);
+  --shadow-color: oklch(0.2 0.05 160 / 0.08);
 
-  --gradient-deep: linear-gradient(180deg, oklch(0.98 0.006 130) 0%, oklch(0.94 0.014 135) 100%);
-  --gradient-aqua: linear-gradient(135deg, oklch(0.52 0.14 150), oklch(0.6 0.15 150));
-  --shadow-glow: 0 0 60px -10px oklch(0.52 0.14 150 / 0.28);
-  --shadow-card: 0 10px 30px -18px oklch(0.26 0.038 158 / 0.14);
-  --shadow-soft: 0 10px 30px rgba(25, 50, 40, 0.05);
+  --gradient-deep: linear-gradient(180deg, oklch(0.98 0.006 130) 0%, oklch(0.94 0.014 148) 100%);
+  --gradient-aqua: linear-gradient(135deg, oklch(0.5 0.13 152), oklch(0.42 0.11 154));
+  --shadow-glow: 0 0 60px -10px oklch(0.5 0.13 152 / 0.32);
+  --shadow-card: 0 12px 32px -18px oklch(0.2 0.05 160 / 0.18);
+  --shadow-soft: 0 10px 30px rgba(15, 45, 33, 0.08);
 }
 
 @layer base {
