@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import drone from "@/assets/hero-site.mp4.asset.json";
+import drone from "@/assets/hero-bg.mp4.asset.json";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative h-screen w-full overflow-hidden bg-black">
       <video
-        autoPlay muted loop playsInline
+        autoPlay muted loop playsInline preload="metadata"
         className="absolute inset-0 w-full h-full object-cover md:object-[center_15%] scale-110"
         style={{ transform: `scale(1.1) translate(${pos.x * -15}px, ${pos.y * -15}px)` }}
         src={drone.url}
