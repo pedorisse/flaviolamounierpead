@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sao from "@/assets/project-saolourenco.jpg";
 import guandu from "@/assets/project-guandu.jpg";
-import saoVideo from "@/assets/eta-saolourenco.mp4.asset.json";
 import guanduVideo from "@/assets/eta-guandu.mp4.asset.json";
 
 type P = {
@@ -11,6 +10,7 @@ type P = {
   loc: string;
   img: string;
   video?: string;
+  previewVimeoId?: string;
   demoVimeoId?: string;
   headline: string;
   body: string;
@@ -18,10 +18,10 @@ type P = {
 };
 
 const projects: P[] = [
-  { n: "01", title: "ETA São Lourenço", loc: "São Paulo · SP", img: sao, video: saoVideo.url, demoVimeoId: "1211509853",
-    headline: "Tubos PEAD em uma das maiores obras de saneamento do Brasil.",
-    body: "Sistema produtor responsável pelo abastecimento de milhões de pessoas na região metropolitana de São Paulo. Infraestrutura crítica que exige tubulações preparadas para operar de forma contínua ao longo de décadas.",
-    tags: ["PEAD", "Adução", "Saneamento", "Larga Escala"] },
+  { n: "01", title: "Subadutora Cubatão", loc: "Santos / Cubatão · SP", img: sao, previewVimeoId: "1211900787", demoVimeoId: "1211900787",
+    headline: "Travessia subaquática em PEAD para reforçar a segurança hídrica na Baixada Santista.",
+    body: "Projeto executado com MND (Método Não Destrutivo), utilizando tubulações lisas em PEAD azul instaladas sob o leito do mar e do Canal do Porto de Santos, sem a necessidade de intervenções destrutivas nas vias urbanas. A solução amplia a estabilidade e a segurança hídrica para quase meio milhão de moradores e turistas da região. Fornecemos 100% da tubulação do trecho, com mais de 5.000 metros lineares e mais de 100 carretas entregues em tempo recorde, garantindo agilidade logística e suporte a uma obra estratégica para o abastecimento regional.",
+    tags: ["PEAD", "MND", "Travessia Subaquática", "Segurança Hídrica"] },
   { n: "02", title: "ETA Guandu", loc: "Rio de Janeiro · RJ", img: guandu, video: guanduVideo.url, demoVimeoId: "1211510047",
     headline: "Escala monumental em um dos sistemas hídricos mais importantes do país.",
     body: "Referência de infraestrutura de tratamento e distribuição de água potável, onde durabilidade e confiabilidade das redes são requisitos operacionais permanentes.",
