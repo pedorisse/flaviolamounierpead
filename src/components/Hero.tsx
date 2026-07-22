@@ -40,13 +40,13 @@ export function Hero() {
             <span className="relative w-8 h-px bg-aqua overflow-hidden">
               <span className="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-aqua animate-travel-line" />
             </span>
-            Portfólio · 2026
+            Politejo · Infraestrutura Hídrica
           </div>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extralight leading-[1.05] text-balance text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-            As soluções por trás das <span className="text-aqua italic font-thin">maiores obras de infraestrutura</span> do Brasil.
+            A tubulação PEAD por trás das <span className="text-aqua italic font-thin">grandes obras de saneamento</span> do Brasil.
           </h1>
           <p className="text-base md:text-lg text-white/85 max-w-2xl font-light leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)]">
-            Especialista em válvulas industriais aplicadas em saneamento, ETA, ETE e sistemas críticos de controle de fluxo.
+            Tubos PEAD de alto desempenho para saneamento, adução, drenagem e emissários. Soluções desenhadas para durar décadas — com eficiência hídrica, segurança operacional e menor impacto ao longo da vida útil das redes.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a href="#projetos" className="group relative px-10 py-4 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-medium overflow-hidden">
