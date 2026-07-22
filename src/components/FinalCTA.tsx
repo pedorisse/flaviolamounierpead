@@ -4,22 +4,21 @@ import horizon from "@/assets/horizon-pipe.jpg";
 export function FinalCTA() {
   return (
     <section className="relative h-[100vh] min-h-[700px] w-full overflow-hidden flex items-center justify-center bg-background">
-      <img src={horizon} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
-      <div className="absolute inset-0 bg-white/10" />
+      <img src={horizon} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
 
       <div className="relative z-10 text-center max-w-5xl px-6 space-y-10 flex flex-col items-center justify-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }} viewport={{ once: true }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-extralight leading-tight text-balance drop-shadow-lg"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-extralight leading-tight text-balance text-foreground"
         >
           A infraestrutura do futuro começa na tubulação certa.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}
-          className="font-body text-lg md:text-2xl text-foreground/90 font-light text-balance max-w-3xl leading-relaxed drop-shadow"
+          className="font-body text-lg md:text-2xl text-graphite font-light text-balance max-w-3xl leading-relaxed"
         >
           Tubos PEAD para saneamento, adução, drenagem e emissários. Fale com a Politejo para especificar a solução mais adequada ao seu projeto.
         </motion.p>
@@ -33,7 +32,7 @@ export function FinalCTA() {
             <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-medium">Falar com a Politejo</span>
           </a>
-          <a href="#projetos" className="px-10 py-4 border border-foreground/30 text-foreground uppercase tracking-[0.25em] text-xs hover:border-aqua hover:text-aqua transition-colors">
+          <a href="#projetos" className="px-10 py-4 border border-[color:var(--border-strong)] text-foreground uppercase tracking-[0.25em] text-xs hover:border-aqua hover:text-aqua-deep transition-colors">
             Ver Soluções
           </a>
         </motion.div>

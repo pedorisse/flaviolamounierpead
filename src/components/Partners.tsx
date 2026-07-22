@@ -17,10 +17,10 @@ export function Partners() {
         viewport={{ once: true }}
         className="max-w-3xl mb-16"
       >
-        <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-aqua" />Principais Soluções
+        <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+          <span className="w-8 h-px bg-aqua-deep" />Principais Soluções
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance">
+        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance text-foreground">
           Tubos PEAD para <span className="italic text-aqua">sistemas críticos.</span>
         </h2>
       </motion.div>
@@ -30,24 +30,23 @@ export function Partners() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
-        className="relative bg-surface-muted border border-border overflow-hidden"
+        className="relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-aqua/5 via-transparent to-transparent pointer-events-none" />
-        <div className="relative grid md:grid-cols-12 gap-10 md:gap-16 p-10 md:p-16">
+        <div className="relative grid md:grid-cols-12 gap-10 md:gap-16 md:pt-6">
           <div className="md:col-span-5 space-y-6">
-            <div className="text-[10px] uppercase tracking-[0.4em] text-aqua">Linha PEAD · Infraestrutura</div>
-            <div className="font-display text-5xl md:text-7xl font-extralight tracking-tight">Politejo</div>
-            <p className="text-foreground/70 leading-relaxed font-light max-w-md">
+            <div className="text-[10px] uppercase tracking-[0.4em] text-aqua-deep">Linha PEAD · Infraestrutura</div>
+            <div className="font-display text-5xl md:text-7xl font-extralight tracking-tight text-foreground">Politejo</div>
+            <p className="text-graphite leading-relaxed font-light max-w-md">
               Portfólio dedicado a redes de saneamento, adução, drenagem e emissários, com foco em durabilidade e eficiência hídrica.
             </p>
             <div className="w-12 h-px bg-aqua" />
           </div>
 
-          <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-border border border-border">
+          <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:var(--border-strong)] border border-[color:var(--border-strong)] bg-surface-soft/60">
             {highlights.map((h) => (
               <div key={h.t} className="bg-card p-6 md:p-8 space-y-2">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">{h.t}</div>
-                <p className="text-foreground/70 text-sm font-light leading-relaxed">{h.d}</p>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-aqua-deep">{h.t}</div>
+                <p className="text-graphite text-sm font-light leading-relaxed">{h.d}</p>
               </div>
             ))}
           </div>
