@@ -94,17 +94,17 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
           viewport={{ once: true, margin: "-100px" }}
           className={`md:col-span-4 space-y-6 ${reverse ? "md:order-1" : ""}`}
         >
-          <div className="flex items-center gap-4 text-aqua text-[10px] uppercase tracking-[0.4em]">
-            <span className="font-display text-2xl text-aqua/60 font-light">{p.n}</span>
-            <span className="w-8 h-px bg-aqua" />
+          <div className="flex items-center gap-4 text-aqua-deep text-[10px] uppercase tracking-[0.4em]">
+            <span className="font-display text-2xl text-aqua/70 font-light">{p.n}</span>
+            <span className="w-8 h-px bg-aqua-deep" />
             {p.loc}
           </div>
-          <h3 className="font-display text-3xl md:text-5xl font-extralight leading-tight text-balance">{p.title}</h3>
-          <p className="text-aqua/90 text-lg md:text-xl italic font-light text-balance">{p.headline}</p>
-          <p className="text-foreground/65 leading-relaxed font-light">{p.body}</p>
+          <h3 className="font-display text-3xl md:text-5xl font-extralight leading-tight text-balance text-foreground">{p.title}</h3>
+          <p className="text-aqua text-lg md:text-xl italic font-light text-balance">{p.headline}</p>
+          <p className="text-graphite leading-relaxed font-light">{p.body}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {p.tags.map((t) => (
-              <span key={t} className="text-[10px] uppercase tracking-[0.3em] px-3 py-1.5 border border-border text-foreground/60">{t}</span>
+              <span key={t} className="text-[10px] uppercase tracking-[0.3em] px-3 py-1.5 border border-[color:var(--border-strong)] text-graphite/85">{t}</span>
             ))}
           </div>
         </motion.div>
@@ -135,10 +135,10 @@ export function Projects() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-aqua" />Presença em Grandes Obras
+          <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+            <span className="w-8 h-px bg-aqua-deep" />Presença em Grandes Obras
           </div>
-          <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance">
+          <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance text-foreground">
             Infraestrutura que <span className="italic text-aqua">sustenta</span> o Brasil.
           </h2>
         </motion.div>

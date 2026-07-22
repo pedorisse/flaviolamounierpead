@@ -27,10 +27,10 @@ export function Knowledge() {
   return (
     <section className="relative py-32 bg-surface-soft grain overflow-hidden">
       <div className="px-6 md:px-16 max-w-7xl mx-auto mb-12">
-        <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-aqua" />Conhecimento Técnico
+        <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+          <span className="w-8 h-px bg-aqua-deep" />Conhecimento Técnico
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance max-w-2xl">
+        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance max-w-2xl text-foreground">
           Engenharia aplicada <span className="italic text-aqua">à rede.</span>
         </h2>
 
@@ -41,8 +41,8 @@ export function Knowledge() {
               onClick={() => setF(x)}
               className={`text-[10px] uppercase tracking-[0.3em] px-4 py-2 border transition-colors ${
                 f === x
-                  ? "border-aqua text-aqua bg-aqua/5"
-                  : "border-border text-foreground/50 hover:text-foreground"
+                  ? "bg-aqua border-aqua text-primary-foreground"
+                  : "bg-card border-[color:var(--border-strong)] text-graphite hover:border-aqua hover:text-aqua-deep"
               }`}
             >
               {x}
@@ -63,7 +63,7 @@ export function Knowledge() {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
                 onClick={() => setOpen(it)}
-                className="group relative aspect-[4/5] overflow-hidden bg-card border border-border hover:border-aqua/60 transition-colors text-left shadow-[0_10px_30px_-15px_var(--shadow-color)]"
+                className="group relative aspect-[4/5] overflow-hidden bg-card border border-[color:var(--border-strong)] hover:border-aqua transition-colors text-left shadow-soft"
               >
                 <video
                   src={it.src}

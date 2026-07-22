@@ -21,7 +21,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="sobre" className="relative py-32 md:py-48 px-6 md:px-16 max-w-7xl mx-auto">
+    <section id="sobre" className="relative bg-background py-32 md:py-48 px-6 md:px-16 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -38,7 +38,7 @@ export function About() {
               <div className="font-display text-2xl text-white">Politejo</div>
             </div>
           </div>
-          <div className="absolute -top-4 -right-4 w-32 h-32 border border-aqua/30 -z-10" />
+          <div className="absolute -top-4 -right-4 w-32 h-32 border border-aqua/20 -z-10" />
         </motion.div>
 
         <div className="md:col-span-7 space-y-10">
@@ -48,21 +48,21 @@ export function About() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="text-aqua text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
-              <span className="w-8 h-px bg-aqua" />Sobre a Politejo
+            <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-aqua-deep" />Sobre a Politejo
             </div>
-            <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance">
+            <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance text-foreground">
               Infraestrutura hídrica<br/>
               <span className="italic text-aqua">construída para durar.</span>
             </h2>
-            <div className="mt-8 space-y-5 text-foreground/70 text-base md:text-lg font-light leading-relaxed max-w-2xl">
+            <div className="mt-8 space-y-5 text-graphite text-base md:text-lg font-light leading-relaxed max-w-2xl">
               <p>Referência nacional na produção e extrusão de tubos em PEAD para infraestrutura, saneamento e sistemas críticos de transporte de água, esgoto e outros recursos essenciais.</p>
               <p>Soluções desenvolvidas para grandes demandas operacionais, com foco em longa vida útil, confiabilidade das redes e redução de intervenções ao longo do ciclo dos sistemas.</p>
               <p>Tecnologia aplicada a redes que sustentam cidades — do coletor de esgoto à adutora de larga escala — com o rigor técnico que projetos de longo prazo exigem.</p>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-px bg-border pt-8 mt-12 border-t border-border min-w-0">
+          <div className="grid grid-cols-2 gap-px bg-[color:var(--border-strong)] pt-8 mt-12 border-t border-[color:var(--border-strong)] min-w-0">
             {stats.map((s, i) => (
               <motion.div
                 key={i}
@@ -72,12 +72,12 @@ export function About() {
                 viewport={{ once: true }}
                 className="bg-card p-6 md:p-8 min-w-0"
               >
-                <div className="font-display text-[11px] md:text-[17px] lg:text-[24px] xl:text-[30px] font-extralight text-aqua leading-tight min-w-0 break-words">
+                <div className="font-display text-[11px] md:text-[17px] lg:text-[24px] xl:text-[30px] font-extralight text-aqua-deep leading-tight min-w-0 break-words">
                   {Array.isArray(s.v) ? s.v.map((line, idx) => (
                     <span key={idx} className="block">{line}</span>
                   )) : s.v}
                 </div>
-                <div className="text-[9px] md:text-[11px] lg:text-xs uppercase tracking-[0.2em] text-foreground/60 mt-2 leading-snug min-w-0 break-words">
+                <div className="text-[9px] md:text-[11px] lg:text-xs uppercase tracking-[0.2em] text-graphite/85 mt-2 leading-snug min-w-0 break-words">
                   {s.l.map((line, idx) => (
                     <span key={idx} className="block">{line}</span>
                   ))}
