@@ -26,6 +26,8 @@
   --color-ring: var(--ring);
   --color-aqua: var(--aqua);
   --color-aqua-glow: var(--aqua-glow);
+  --color-aqua-hover: var(--aqua-hover);
+  --color-aqua-deep: var(--aqua-deep);
   --color-graphite: var(--graphite);
   --color-steel: var(--steel);
   --color-surface: var(--surface);
