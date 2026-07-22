@@ -35,43 +35,45 @@
 }
 
 :root {
-  /* Politejo — light institutional palette
-     Off-white base, white surfaces, institutional green accents. */
-  --background: oklch(0.973 0.008 128);        /* #F7F8F4 */
-  --foreground: oklch(0.29 0.036 158);         /* #123127 */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.29 0.036 158);
-  --primary: oklch(0.55 0.15 150);
+  /* Politejo — refined light institutional palette
+     70% branco/off-white · 20% neutros claros · 10% verde institucional */
+  --background: oklch(0.965 0.006 105);        /* #F6F6F2 off-white neutro */
+  --foreground: oklch(0.26 0.038 158);         /* #17332A verde quase preto */
+  --card: oklch(1 0 0);                        /* #FFFFFF */
+  --card-foreground: oklch(0.26 0.038 158);
+  --primary: oklch(0.52 0.14 150);             /* verde institucional */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.94 0.014 135);
-  --secondary-foreground: oklch(0.29 0.036 158);
-  --muted: oklch(0.96 0.008 135);
-  --muted-foreground: oklch(0.5 0.014 165);    /* #4F615A */
-  --accent: oklch(0.55 0.15 150);
+  --secondary: oklch(0.94 0.006 110);          /* #F0F1ED neutro */
+  --secondary-foreground: oklch(0.32 0.036 158);
+  --muted: oklch(0.94 0.006 110);
+  --muted-foreground: oklch(0.47 0.012 165);   /* #4B5B55 grafite corpo */
+  --accent: oklch(0.52 0.14 150);
   --accent-foreground: oklch(1 0 0);
-  --border: oklch(0.29 0.036 158 / 0.14);
-  --ring: oklch(0.55 0.15 150);
+  --border: oklch(0.26 0.038 158 / 0.12);      /* borda discreta */
+  --ring: oklch(0.52 0.14 150);
 
-  /* Brand tokens — kept under original names so components map globally. */
-  --aqua: oklch(0.55 0.15 150);
-  --aqua-glow: oklch(0.65 0.17 150);
-  --aqua-hover: oklch(0.48 0.14 150);
-  --graphite: oklch(0.29 0.036 158);
-  --steel: oklch(0.5 0.014 165);
+  /* Brand tokens — mantidos com os mesmos nomes para mapeamento global. */
+  --aqua: oklch(0.52 0.14 150);                /* verde institucional */
+  --aqua-glow: oklch(0.6 0.15 150);            /* variação clara p/ mídia escura */
+  --aqua-hover: oklch(0.44 0.13 150);          /* hover ~8% mais escuro */
+  --aqua-deep: oklch(0.38 0.11 155);           /* verde escuro p/ títulos/loc */
+  --graphite: oklch(0.32 0.036 158);           /* títulos secundários */
+  --steel: oklch(0.47 0.012 165);              /* corpo */
 
-  /* Surfaces / alternation */
-  --surface: oklch(1 0 0);
-  --surface-muted: oklch(0.96 0.008 135);      /* #F2F5F0 */
-  --surface-soft: oklch(0.94 0.014 135);       /* #EEF2EB */
+  /* Surfaces / alternação de seções */
+  --surface: oklch(1 0 0);                     /* #FFFFFF */
+  --surface-muted: oklch(0.94 0.006 110);      /* #F0F1ED neutro */
+  --surface-soft: oklch(0.93 0.012 145);       /* #EAF1EA verde muito claro */
   --surface-dark: oklch(0.18 0.028 162);       /* hero / footer / modal */
 
-  --border-strong: oklch(0.29 0.036 158 / 0.24);
-  --shadow-color: oklch(0.29 0.036 158 / 0.08);
+  --border-strong: oklch(0.26 0.038 158 / 0.2);
+  --shadow-color: oklch(0.26 0.038 158 / 0.05);
 
   --gradient-deep: linear-gradient(180deg, oklch(0.98 0.006 130) 0%, oklch(0.94 0.014 135) 100%);
-  --gradient-aqua: linear-gradient(135deg, oklch(0.55 0.15 150), oklch(0.65 0.17 150));
-  --shadow-glow: 0 0 60px -10px oklch(0.55 0.15 150 / 0.35);
-  --shadow-card: 0 20px 50px -20px oklch(0.29 0.036 158 / 0.12);
+  --gradient-aqua: linear-gradient(135deg, oklch(0.52 0.14 150), oklch(0.6 0.15 150));
+  --shadow-glow: 0 0 60px -10px oklch(0.52 0.14 150 / 0.28);
+  --shadow-card: 0 10px 30px -18px oklch(0.26 0.038 158 / 0.14);
+  --shadow-soft: 0 10px 30px rgba(25, 50, 40, 0.05);
 }
 
 @layer base {
