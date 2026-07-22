@@ -72,7 +72,7 @@ export function About() {
                 viewport={{ once: true }}
                 className="bg-background p-6 md:p-8 min-w-0"
               >
-                <div className="font-display text-[clamp(0.75rem,2.2vw,1.875rem)] font-extralight text-aqua leading-tight min-w-0 break-words">
+                <div className="font-display text-[clamp(0.6875rem,2.2vw,1.875rem)] font-extralight text-aqua leading-tight min-w-0 break-words">
                   {Array.isArray(s.v) ? s.v.map((line, idx) => (
                     <span key={idx} className="block">{line}</span>
                   )) : s.v}
