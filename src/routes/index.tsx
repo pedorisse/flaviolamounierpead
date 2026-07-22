@@ -10,10 +10,10 @@ import { FinalCTA } from "@/components/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Flávio Lamounier · Especialista em Válvulas Industriais" },
-      { name: "description", content: "Especialista em válvulas industriais aplicadas em saneamento, ETA, ETE e sistemas críticos de controle de fluxo. Trajetória em grandes obras como ETA São Lourenço e ETA Guandu." },
-      { property: "og:title", content: "Flávio Lamounier · Válvulas Industriais para Sistemas Críticos" },
-      { property: "og:description", content: "Autoridade em válvulas industriais para saneamento, ETA, ETE e controle de fluxo." },
+      { title: "Politejo · Infraestrutura Hídrica, Saneamento e Sustentabilidade" },
+      { name: "description", content: "Politejo desenvolve soluções técnicas para infraestrutura hídrica, saneamento e eficiência de recursos, com foco em durabilidade, sustentabilidade e impacto positivo nas cidades." },
+      { property: "og:title", content: "Politejo · Infraestrutura Hídrica e Saneamento Sustentável" },
+      { property: "og:description", content: "Soluções sustentáveis para infraestrutura hídrica, saneamento e eficiência de recursos em grandes cidades." },
       { property: "og:type", content: "website" },
     ],
   }),
