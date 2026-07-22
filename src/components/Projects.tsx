@@ -2,8 +2,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import sao from "@/assets/project-saolourenco.jpg";
 import guandu from "@/assets/project-guandu.jpg";
-import guanduVideo from "@/assets/eta-guandu.mp4.asset.json";
 import cubataoVideo from "@/assets/subadutora-cubatao.mp4.asset.json";
+import litoralVideo from "@/assets/litoral-norte.mp4.asset.json";
 
 type P = {
   n: string;
@@ -23,10 +23,10 @@ const projects: P[] = [
     headline: "Travessia subaquática em PEAD para reforçar a segurança hídrica na Baixada Santista.",
     body: "Projeto executado com MND (Método Não Destrutivo), utilizando tubulações lisas em PEAD azul instaladas sob o leito do mar e do Canal do Porto de Santos, sem a necessidade de intervenções destrutivas nas vias urbanas. A solução amplia a estabilidade e a segurança hídrica para quase meio milhão de moradores e turistas da região. Fornecemos 100% da tubulação do trecho, com mais de 5.000 metros lineares e mais de 100 carretas entregues em tempo recorde, garantindo agilidade logística e suporte a uma obra estratégica para o abastecimento regional.",
     tags: ["PEAD", "MND", "Travessia Subaquática", "Segurança Hídrica"] },
-  { n: "02", title: "ETA Guandu", loc: "Rio de Janeiro · RJ", img: guandu, video: guanduVideo.url, demoVimeoId: "1211510047",
-    headline: "Escala monumental em um dos sistemas hídricos mais importantes do país.",
-    body: "Referência de infraestrutura de tratamento e distribuição de água potável, onde durabilidade e confiabilidade das redes são requisitos operacionais permanentes.",
-    tags: ["Tratamento", "Distribuição", "Confiabilidade"] },
+  { n: "02", title: "Sistema Integrado do Litoral Norte", loc: "Litoral Norte · SP", img: sao, video: litoralVideo.url, demoVimeoId: "1211900786",
+    headline: "Ampliação e segurança hídrica para os municípios do Litoral Norte de São Paulo.",
+    body: "Projeto voltado à ampliação, modernização e garantia da segurança do sistema de abastecimento de água dos municípios do Litoral Norte de São Paulo. A solução foi desenvolvida para reduzir os riscos de desabastecimento provocados pelo crescimento populacional e pelo aumento expressivo da demanda durante as temporadas de turismo da região. Fornecemos centenas de carretas para a modernização dos sistemas de água e esgoto, contribuindo para ampliar a capacidade operacional, a confiabilidade da rede e a segurança hídrica para moradores e visitantes.",
+    tags: ["Abastecimento", "Segurança Hídrica", "Litoral Norte", "Grande Escala"] },
 ];
 
 function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (vimeoId: string, title: string) => void }) {
