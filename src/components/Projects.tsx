@@ -144,7 +144,7 @@ export function Projects() {
         </motion.div>
       </div>
       {projects.map((p, i) => (
-        <ProjectPanel key={p.n} p={p} idx={i} onOpenDemo={(vimeoId, title) => setDemo({ vimeoId, title })} />
+        <ProjectPanel key={p.n} p={p} idx={i} onOpenDemo={(vimeoId, title) => setDemo({ vimeoId, title, loc: p.loc })} />
       ))}
 
       <AnimatePresence>
@@ -169,7 +169,7 @@ export function Projects() {
                 style={{ aspectRatio: "9 / 16", width: "min(100%, calc(85vh * 9 / 16))" }}
               >
                 <iframe
-                  src={`https://player.vimeo.com/video/${demo.vimeoId}?autoplay=1`}
+                  src={`https://player.vimeo.com/video/${demo.vimeoId}?autoplay=1&muted=0&controls=1&autopause=0&playsinline=1`}
                   className="absolute inset-0 w-full h-full"
                   frameBorder={0}
                   allow="autoplay; fullscreen; picture-in-picture"
@@ -181,6 +181,7 @@ export function Projects() {
                 <div>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua">Demonstração</div>
                   <div className="font-display text-xl mt-1">{demo.title}</div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-foreground/50 mt-1">{demo.loc}</div>
                 </div>
                 <button
                   onClick={() => setDemo(null)}
