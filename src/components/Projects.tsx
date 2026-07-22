@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import sao from "@/assets/project-saolourenco.jpg";
 import guandu from "@/assets/project-guandu.jpg";
 import guanduVideo from "@/assets/eta-guandu.mp4.asset.json";
+import cubataoVideo from "@/assets/subadutora-cubatao.mp4.asset.json";
 
 type P = {
   n: string;
@@ -18,7 +19,7 @@ type P = {
 };
 
 const projects: P[] = [
-  { n: "01", title: "Subadutora Cubatão", loc: "Santos / Cubatão · SP", img: sao, previewVimeoId: "1211900787", demoVimeoId: "1211900787",
+  { n: "01", title: "Subadutora Cubatão", loc: "Santos / Cubatão · SP", img: sao, video: cubataoVideo.url, demoVimeoId: "1211900787",
     headline: "Travessia subaquática em PEAD para reforçar a segurança hídrica na Baixada Santista.",
     body: "Projeto executado com MND (Método Não Destrutivo), utilizando tubulações lisas em PEAD azul instaladas sob o leito do mar e do Canal do Porto de Santos, sem a necessidade de intervenções destrutivas nas vias urbanas. A solução amplia a estabilidade e a segurança hídrica para quase meio milhão de moradores e turistas da região. Fornecemos 100% da tubulação do trecho, com mais de 5.000 metros lineares e mais de 100 carretas entregues em tempo recorde, garantindo agilidade logística e suporte a uma obra estratégica para o abastecimento regional.",
     tags: ["PEAD", "MND", "Travessia Subaquática", "Segurança Hídrica"] },
