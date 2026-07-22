@@ -13,10 +13,10 @@ function Counter({ value, suffix = "+" }: { value: number; suffix?: string }) {
 }
 
 const stats = [
-  { v: "[A CONFIRMAR]", l: ["ANOS DE", "ATUAÇÃO"] },
-  { v: "[A CONFIRMAR]", l: ["GRANDES OBRAS DE", "SANEAMENTO ATENDIDAS"] },
-  { v: "[A CONFIRMAR]", l: ["QUILÔMETROS DE TUBO", "PEAD FORNECIDOS"] },
-  { v: "REFERÊNCIA", l: ["NACIONAL EM TUBOS", "PEAD PARA SANEAMENTO"] },
+  { v: ["SOLUÇÕES", "TERMOPLÁSTICAS"], l: ["PARA REDES DE", "INFRAESTRUTURA"] },
+  { v: ["LÍDER"], l: ["NAS MAIORES", "COMPANHIAS DE", "SANEAMENTO"] },
+  { v: ["PRESENÇA"], l: ["NOS MAIORES PROJETOS", "DE TRATAMENTO DE ÁGUA", "E ESGOTO DO BRASIL"] },
+  { v: ["REFERÊNCIA"], l: ["EM TUBULAÇÕES PEAD", "PARA INFRAESTRUTURA"] },
 ];
 
 export function About() {
