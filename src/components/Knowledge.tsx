@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import presenter from "@/assets/flavio-visita.mp4.asset.json";
+import coletores from "@/assets/coletores-esgoto.mp4.asset.json";
 import tecnologia from "@/assets/tecnologia-infraestrutura.mp4.asset.json";
 import travessiasMnd from "@/assets/travessias-mnd.mp4.asset.json";
 
@@ -16,7 +16,7 @@ type Item = { id: number; title: string; subtitle: string; cat: F[]; tags?: stri
 const items: Item[] = [
   { id: 1, title: "Redes adutoras em PEAD", subtitle: "TRANSPORTE DE ÁGUA EM GRANDES DISTÂNCIAS", cat: ["Tubos PEAD"], tags: ["ADUÇÃO", "PEAD", "GRANDE ESCALA"], src: tecnologia.url },
   { id: 2, title: "Travessias em MND", subtitle: "INSTALAÇÃO SEM INTERVENÇÕES DESTRUTIVAS", cat: ["Tubos PEAD"], tags: ["MND", "PEAD", "INFRAESTRUTURA"], src: travessiasMnd.url },
-  { id: 3, title: "Redes em campo e obra", subtitle: "Instalação e operação de PEAD em grandes projetos de saneamento", cat: ["Saneamento", "Tubos PEAD"], src: presenter.url },
+  { id: 3, title: "Coletores de esgoto", subtitle: "ROBUSTEZ PARA SISTEMAS CRÍTICOS", cat: ["Saneamento"], tags: ["ESGOTO", "SANEAMENTO", "DURABILIDADE"], src: coletores.url },
 ];
 
 export function Knowledge() {
