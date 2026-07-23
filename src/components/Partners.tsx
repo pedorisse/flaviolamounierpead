@@ -1,10 +1,31 @@
 import { motion } from "motion/react";
+import { Waves, Droplets, CloudRain, Anchor } from "lucide-react";
 
 const highlights = [
-  { t: "Coletores de Esgoto", d: "Tubos PEAD para coletores de esgoto em redes urbanas de alta exigência." },
-  { t: "Redes Adutoras", d: "Tubos PEAD para adução de água em sistemas de larga escala e longa distância." },
-  { t: "Drenagem", d: "Tubos PEAD para redes de drenagem urbana e infraestruturas pluviais." },
-  { t: "Emissários", d: "Tubos PEAD para emissários terrestres e subaquáticos em obras críticas." },
+  {
+    t: "Coletores de Esgoto",
+    d: "Tubos PEAD para coletores de esgoto em redes urbanas de alta exigência.",
+    Icon: Waves,
+    n: "01",
+  },
+  {
+    t: "Redes Adutoras",
+    d: "Tubos PEAD para adução de água em sistemas de larga escala e longa distância.",
+    Icon: Droplets,
+    n: "02",
+  },
+  {
+    t: "Drenagem",
+    d: "Tubos PEAD para redes de drenagem urbana e infraestruturas pluviais.",
+    Icon: CloudRain,
+    n: "03",
+  },
+  {
+    t: "Emissários",
+    d: "Tubos PEAD para emissários terrestres e subaquáticos em obras críticas.",
+    Icon: Anchor,
+    n: "04",
+  },
 ];
 
 export function Partners() {
@@ -42,13 +63,40 @@ export function Partners() {
             <div className="w-12 h-px bg-aqua" />
           </div>
 
-          <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:var(--border-strong)] border border-[color:var(--border-strong)] bg-surface-soft/60">
-            {highlights.map((h) => (
-              <div key={h.t} className="bg-card p-5 md:p-7 space-y-2">
-                <div className="text-[11px] uppercase tracking-[0.3em] text-aqua-deep">{h.t}</div>
-                <p className="text-graphite text-sm md:text-[15px] leading-relaxed">{h.d}</p>
-              </div>
-            ))}
+          <div className="md:col-span-7">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-6 h-px bg-aqua-deep/60" />
+              <span className="text-[10px] uppercase tracking-[0.4em] text-aqua-deep font-semibold">
+                Aplicações principais
+              </span>
+              <span className="text-[10px] tracking-[0.3em] text-steel/70">04</span>
+            </div>
+
+            <ul className="grid sm:grid-cols-2 border-t border-l border-[color:var(--border-strong)]">
+              {highlights.map(({ t, d, Icon, n }) => (
+                <li
+                  key={t}
+                  className="group relative border-r border-b border-[color:var(--border-strong)] bg-card p-6 md:p-7 transition-colors duration-500 hover:bg-surface-soft/60"
+                >
+                  <span className="absolute top-4 right-5 text-[10px] tracking-[0.3em] text-steel/60 font-mono">
+                    {n}
+                  </span>
+
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border-strong)] bg-surface-soft/50 text-aqua-deep transition-colors duration-500 group-hover:border-aqua group-hover:text-aqua">
+                    <Icon strokeWidth={1.4} className="h-5 w-5" />
+                  </div>
+
+                  <h3 className="font-display text-lg md:text-xl font-medium text-foreground leading-snug mb-2">
+                    {t}
+                  </h3>
+                  <p className="text-graphite text-sm md:text-[14.5px] leading-relaxed max-w-[38ch]">
+                    {d}
+                  </p>
+
+                  <span className="absolute bottom-0 left-0 h-px w-0 bg-aqua transition-all duration-700 group-hover:w-full" />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </motion.div>
