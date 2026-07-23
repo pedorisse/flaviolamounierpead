@@ -9,18 +9,18 @@ const highlights = [
 
 export function Partners() {
   return (
-    <section className="relative py-32 px-6 md:px-16 max-w-7xl mx-auto bg-card">
+    <section className="relative py-20 md:py-28 px-6 md:px-16 max-w-7xl mx-auto bg-card">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="max-w-3xl mb-16"
+        className="max-w-3xl mb-12"
       >
-        <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+        <div className="text-aqua-deep text-[11px] uppercase tracking-[0.4em] mb-5 flex items-center gap-3">
           <span className="w-8 h-px bg-aqua-deep" />Principais Soluções
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance text-foreground">
+        <h2 className="font-display text-3xl md:text-5xl font-light leading-[1.1] text-balance text-foreground">
           Tubos PEAD para <span className="italic text-aqua">sistemas críticos.</span>
         </h2>
       </motion.div>
@@ -32,11 +32,11 @@ export function Partners() {
         viewport={{ once: true }}
         className="relative"
       >
-        <div className="relative grid md:grid-cols-12 gap-10 md:gap-16 md:pt-6">
-          <div className="md:col-span-5 space-y-6">
-            <div className="text-[10px] uppercase tracking-[0.4em] text-aqua-deep">Linha PEAD · Infraestrutura</div>
-            <div className="font-display text-5xl md:text-7xl font-extralight tracking-tight text-foreground">Politejo</div>
-            <p className="text-graphite leading-relaxed font-light max-w-md">
+        <div className="relative grid md:grid-cols-12 gap-10 md:gap-14 md:pt-4">
+          <div className="md:col-span-5 space-y-5">
+            <div className="text-[11px] uppercase tracking-[0.4em] text-aqua-deep">Linha PEAD · Infraestrutura</div>
+            <div className="font-display text-4xl md:text-6xl font-light tracking-tight text-foreground">Politejo</div>
+            <p className="text-graphite text-base md:text-[17px] leading-relaxed max-w-[46ch]">
               Portfólio dedicado a redes de saneamento, adução, drenagem e emissários, com foco em durabilidade e eficiência hídrica.
             </p>
             <div className="w-12 h-px bg-aqua" />
@@ -44,9 +44,9 @@ export function Partners() {
 
           <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:var(--border-strong)] border border-[color:var(--border-strong)] bg-surface-soft/60">
             {highlights.map((h) => (
-              <div key={h.t} className="bg-card p-6 md:p-8 space-y-2">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-aqua-deep">{h.t}</div>
-                <p className="text-graphite text-sm font-light leading-relaxed">{h.d}</p>
+              <div key={h.t} className="bg-card p-5 md:p-7 space-y-2">
+                <div className="text-[11px] uppercase tracking-[0.3em] text-aqua-deep">{h.t}</div>
+                <p className="text-graphite text-sm md:text-[15px] leading-relaxed">{h.d}</p>
               </div>
             ))}
           </div>
