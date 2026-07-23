@@ -37,8 +37,8 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
   const hasDemo = !!p.demoVimeoId;
 
   return (
-    <div ref={ref} className="relative min-h-screen flex items-center py-24 px-6 md:px-16 overflow-hidden">
-      <div className={`relative grid md:grid-cols-12 gap-10 md:gap-20 max-w-7xl mx-auto w-full items-center ${reverse ? "md:flex-row-reverse" : ""}`}>
+    <div ref={ref} className="relative flex items-center py-16 md:py-24 px-6 md:px-16 overflow-hidden">
+      <div className={`relative grid md:grid-cols-12 gap-8 md:gap-14 max-w-7xl mx-auto w-full items-center ${reverse ? "md:flex-row-reverse" : ""}`}>
         <motion.div style={{ y, opacity }} className={`md:col-span-8 relative ${reverse ? "md:order-2" : ""}`}>
           <div
             className={`relative aspect-[16/10] overflow-hidden group ${hasDemo ? "cursor-pointer" : ""}`}
