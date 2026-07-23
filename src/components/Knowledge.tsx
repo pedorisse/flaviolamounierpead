@@ -77,12 +77,12 @@ export function Knowledge() {
                 <div className="absolute top-4 right-4 w-12 h-12 border border-aqua/60 flex items-center justify-center text-aqua bg-white/20 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity">
                   ▶
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2">
+                <div className="absolute bottom-0 left-0 right-0 p-5 space-y-1.5">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua-glow">{it.subtitle}</div>
-                  <div className="font-display text-xl md:text-2xl font-extralight leading-tight text-white">{it.title}</div>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
+                  <div className="font-display text-lg md:text-xl font-light leading-tight text-white">{it.title}</div>
+                  <div className="flex flex-wrap gap-1.5 pt-1.5">
                     {(it.tags || it.cat.slice(0, 2)).map((c) => (
-                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-white/70 border border-white/20 px-2 py-0.5">
+                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-white/85 border border-white/30 px-2 py-0.5">
                         {c}
                       </span>
                     ))}
