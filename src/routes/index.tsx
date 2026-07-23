@@ -12,8 +12,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Politejo · Infraestrutura Hídrica, Saneamento e Sustentabilidade" },
       { name: "description", content: "Politejo desenvolve soluções técnicas para infraestrutura hídrica, saneamento e eficiência de recursos, com foco em durabilidade, sustentabilidade e impacto positivo nas cidades." },
-      { property: "og:title", content: "Politejo · Infraestrutura Hídrica e Saneamento Sustentável" },
-      { property: "og:description", content: "Soluções sustentáveis para infraestrutura hídrica, saneamento e eficiência de recursos em grandes cidades." },
+      { property: "og:title", content: "Politejo · Infraestrutura Hídrica, Saneamento e Sustentabilidade" },
+      { property: "og:description", content: "Politejo desenvolve soluções técnicas para infraestrutura hídrica, saneamento e eficiência de recursos, com foco em durabilidade, sustentabilidade e impacto positivo nas cidades." },
       { property: "og:type", content: "website" },
     ],
   }),
