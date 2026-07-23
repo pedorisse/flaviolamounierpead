@@ -36,12 +36,6 @@ export function Hero() {
           transition={{ duration: 1.4, delay: 0.3 }}
           className="space-y-8 max-w-4xl translate-y-[15vh]"
         >
-          <div className="flex items-center gap-3 text-aqua-glow text-[11px] uppercase tracking-[0.4em] font-semibold">
-            <span className="relative w-8 h-px bg-aqua-glow overflow-hidden">
-              <span className="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-aqua-glow animate-travel-line" />
-            </span>
-            Politejo · Infraestrutura Hídrica
-          </div>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-[1.05] text-balance text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
             A tubulação PEAD por trás das <span className="text-aqua-glow italic">grandes obras de saneamento</span> do Brasil.
           </h1>
