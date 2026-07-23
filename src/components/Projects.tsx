@@ -92,19 +92,19 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          className={`md:col-span-4 space-y-6 ${reverse ? "md:order-1" : ""}`}
+          className={`md:col-span-4 space-y-5 ${reverse ? "md:order-1" : ""}`}
         >
-          <div className="flex items-center gap-4 text-aqua-deep text-[10px] uppercase tracking-[0.4em]">
-            <span className="font-display text-2xl text-aqua/70 font-light">{p.n}</span>
+          <div className="flex items-center gap-3 text-aqua-deep text-[11px] uppercase tracking-[0.4em]">
+            <span className="font-display text-xl text-aqua/70 font-light">{p.n}</span>
             <span className="w-8 h-px bg-aqua-deep" />
-            {p.loc}
+            <span>{p.loc}</span>
           </div>
-          <h3 className="font-display text-3xl md:text-5xl font-extralight leading-tight text-balance text-foreground">{p.title}</h3>
-          <p className="text-aqua text-lg md:text-xl italic font-light text-balance">{p.headline}</p>
-          <p className="text-graphite leading-relaxed font-light">{p.body}</p>
-          <div className="flex flex-wrap gap-2 pt-2">
+          <h3 className="font-display text-2xl md:text-4xl font-light leading-[1.1] text-balance text-foreground">{p.title}</h3>
+          <p className="text-aqua text-base md:text-lg italic font-light text-balance leading-snug">{p.headline}</p>
+          <p className="text-graphite text-[15px] md:text-base leading-relaxed max-w-[52ch]">{p.body}</p>
+          <div className="flex flex-wrap gap-1.5 pt-1">
             {p.tags.map((t) => (
-              <span key={t} className="text-[10px] uppercase tracking-[0.3em] px-3 py-1.5 border border-[color:var(--border-strong)] text-graphite/85">{t}</span>
+              <span key={t} className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-1 border border-[color:var(--border-strong)] text-aqua-deep">{t}</span>
             ))}
           </div>
         </motion.div>
