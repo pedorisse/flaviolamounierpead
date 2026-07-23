@@ -25,16 +25,16 @@ export function Knowledge() {
   const filtered = f === "Todos" ? items : items.filter((i) => i.cat.includes(f));
 
   return (
-    <section className="relative py-32 bg-surface-soft grain overflow-hidden">
-      <div className="px-6 md:px-16 max-w-7xl mx-auto mb-12">
-        <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+    <section className="relative py-20 md:py-28 bg-surface-soft grain overflow-hidden">
+      <div className="px-6 md:px-16 max-w-7xl mx-auto mb-10">
+        <div className="text-aqua-deep text-[11px] uppercase tracking-[0.4em] mb-5 flex items-center gap-3">
           <span className="w-8 h-px bg-aqua-deep" />Conhecimento Técnico
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-extralight leading-tight text-balance max-w-2xl text-foreground">
+        <h2 className="font-display text-3xl md:text-5xl font-light leading-[1.1] text-balance max-w-2xl text-foreground">
           Engenharia aplicada <span className="italic text-aqua">à rede.</span>
         </h2>
 
-        <div className="mt-10 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-2">
           {filters.map((x) => (
             <button
               key={x}
@@ -42,7 +42,7 @@ export function Knowledge() {
               className={`text-[10px] uppercase tracking-[0.3em] px-4 py-2 border transition-colors ${
                 f === x
                   ? "bg-aqua border-aqua text-primary-foreground"
-                  : "bg-card border-[color:var(--border-strong)] text-graphite hover:border-aqua hover:text-aqua-deep"
+                  : "bg-card border-[color:var(--border-strong)] text-aqua-deep hover:border-aqua hover:bg-surface-muted"
               }`}
             >
               {x}
@@ -77,12 +77,12 @@ export function Knowledge() {
                 <div className="absolute top-4 right-4 w-12 h-12 border border-aqua/60 flex items-center justify-center text-aqua bg-white/20 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity">
                   ▶
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2">
+                <div className="absolute bottom-0 left-0 right-0 p-5 space-y-1.5">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-aqua-glow">{it.subtitle}</div>
-                  <div className="font-display text-xl md:text-2xl font-extralight leading-tight text-white">{it.title}</div>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
+                  <div className="font-display text-lg md:text-xl font-light leading-tight text-white">{it.title}</div>
+                  <div className="flex flex-wrap gap-1.5 pt-1.5">
                     {(it.tags || it.cat.slice(0, 2)).map((c) => (
-                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-white/70 border border-white/20 px-2 py-0.5">
+                      <span key={c} className="text-[9px] uppercase tracking-[0.25em] text-white/85 border border-white/30 px-2 py-0.5">
                         {c}
                       </span>
                     ))}

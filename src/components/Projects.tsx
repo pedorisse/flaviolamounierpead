@@ -37,8 +37,8 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
   const hasDemo = !!p.demoVimeoId;
 
   return (
-    <div ref={ref} className="relative min-h-screen flex items-center py-24 px-6 md:px-16 overflow-hidden">
-      <div className={`relative grid md:grid-cols-12 gap-10 md:gap-20 max-w-7xl mx-auto w-full items-center ${reverse ? "md:flex-row-reverse" : ""}`}>
+    <div ref={ref} className="relative flex items-center py-16 md:py-24 px-6 md:px-16 overflow-hidden">
+      <div className={`relative grid md:grid-cols-12 gap-8 md:gap-14 max-w-7xl mx-auto w-full items-center ${reverse ? "md:flex-row-reverse" : ""}`}>
         <motion.div style={{ y, opacity }} className={`md:col-span-8 relative ${reverse ? "md:order-2" : ""}`}>
           <div
             className={`relative aspect-[16/10] overflow-hidden group ${hasDemo ? "cursor-pointer" : ""}`}
@@ -92,19 +92,19 @@ function ProjectPanel({ p, idx, onOpenDemo }: { p: P; idx: number; onOpenDemo: (
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          className={`md:col-span-4 space-y-6 ${reverse ? "md:order-1" : ""}`}
+          className={`md:col-span-4 space-y-5 ${reverse ? "md:order-1" : ""}`}
         >
-          <div className="flex items-center gap-4 text-aqua-deep text-[10px] uppercase tracking-[0.4em]">
-            <span className="font-display text-2xl text-aqua/70 font-light">{p.n}</span>
+          <div className="flex items-center gap-3 text-aqua-deep text-[11px] uppercase tracking-[0.4em]">
+            <span className="font-display text-xl text-aqua/70 font-light">{p.n}</span>
             <span className="w-8 h-px bg-aqua-deep" />
-            {p.loc}
+            <span>{p.loc}</span>
           </div>
-          <h3 className="font-display text-3xl md:text-5xl font-extralight leading-tight text-balance text-foreground">{p.title}</h3>
-          <p className="text-aqua text-lg md:text-xl italic font-light text-balance">{p.headline}</p>
-          <p className="text-graphite leading-relaxed font-light">{p.body}</p>
-          <div className="flex flex-wrap gap-2 pt-2">
+          <h3 className="font-display text-2xl md:text-4xl font-light leading-[1.1] text-balance text-foreground">{p.title}</h3>
+          <p className="text-aqua text-base md:text-lg italic font-light text-balance leading-snug">{p.headline}</p>
+          <p className="text-graphite text-[15px] md:text-base leading-relaxed max-w-[52ch]">{p.body}</p>
+          <div className="flex flex-wrap gap-1.5 pt-1">
             {p.tags.map((t) => (
-              <span key={t} className="text-[10px] uppercase tracking-[0.3em] px-3 py-1.5 border border-[color:var(--border-strong)] text-graphite/85">{t}</span>
+              <span key={t} className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-1 border border-[color:var(--border-strong)] text-aqua-deep">{t}</span>
             ))}
           </div>
         </motion.div>
@@ -127,7 +127,7 @@ export function Projects() {
 
   return (
     <section id="projetos" className="relative bg-card">
-      <div className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
+      <div className="pt-20 pb-8 md:pt-28 md:pb-12 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,10 +135,10 @@ export function Projects() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+          <div className="text-aqua-deep text-[11px] uppercase tracking-[0.4em] mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-aqua-deep" />Presença em Grandes Obras
           </div>
-          <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance text-foreground">
+          <h2 className="font-display text-4xl md:text-6xl font-light leading-[1.05] text-balance text-foreground">
             Infraestrutura que <span className="italic text-aqua">sustenta</span> o Brasil.
           </h2>
         </motion.div>
