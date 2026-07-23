@@ -127,7 +127,7 @@ export function Projects() {
 
   return (
     <section id="projetos" className="relative bg-card">
-      <div className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
+      <div className="pt-20 pb-8 md:pt-28 md:pb-12 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,10 +135,10 @@ export function Projects() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <div className="text-aqua-deep text-xs uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+          <div className="text-aqua-deep text-[11px] uppercase tracking-[0.4em] mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-aqua-deep" />Presença em Grandes Obras
           </div>
-          <h2 className="font-display text-5xl md:text-7xl font-extralight leading-[1.05] text-balance text-foreground">
+          <h2 className="font-display text-4xl md:text-6xl font-light leading-[1.05] text-balance text-foreground">
             Infraestrutura que <span className="italic text-aqua">sustenta</span> o Brasil.
           </h2>
         </motion.div>
