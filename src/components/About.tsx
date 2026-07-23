@@ -55,35 +55,52 @@ export function About() {
               Infraestrutura hídrica<br/>
               <span className="italic text-aqua">construída para durar.</span>
             </h2>
-            <div className="mt-6 space-y-4 text-graphite text-base md:text-[17px] leading-relaxed max-w-[60ch]">
-              <p>Referência nacional na produção e extrusão de tubos em PEAD para infraestrutura, saneamento e sistemas críticos de transporte de água, esgoto e outros recursos essenciais.</p>
+            <div className="mt-6 space-y-4 text-graphite text-base md:text-[17px] leading-[1.75] max-w-[60ch]">
+              <p><span className="text-foreground font-medium">Referência nacional</span> na produção e extrusão de tubos em PEAD para infraestrutura, saneamento e sistemas críticos de transporte de água, esgoto e outros recursos essenciais.</p>
               <p>Soluções desenvolvidas para grandes demandas operacionais, com foco em longa vida útil, confiabilidade das redes e redução de intervenções ao longo do ciclo dos sistemas.</p>
               <p>Tecnologia aplicada a redes que sustentam cidades — do coletor de esgoto à adutora de larga escala — com o rigor técnico que projetos de longo prazo exigem.</p>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-px bg-[color:var(--border-strong)] pt-6 mt-8 border-t border-[color:var(--border-strong)] min-w-0">
-            {stats.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-card p-5 md:p-7 min-w-0"
-              >
-                <div className="font-display text-[13px] md:text-lg lg:text-xl xl:text-2xl font-medium text-aqua-deep leading-tight min-w-0 break-words">
-                  {Array.isArray(s.v) ? s.v.map((line, idx) => (
-                    <span key={idx} className="block">{line}</span>
-                  )) : s.v}
-                </div>
-                <div className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-steel mt-2 leading-snug min-w-0 break-words">
-                  {s.l.map((line, idx) => (
-                    <span key={idx} className="block">{line}</span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <div className="pt-2">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="w-6 h-px bg-aqua-deep/60" />
+              <span className="text-[10px] uppercase tracking-[0.4em] text-aqua-deep font-semibold">
+                Diferenciais Institucionais
+              </span>
+              <span className="ml-auto text-[10px] tracking-[0.3em] text-steel/70 font-mono">04 / 04</span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-px bg-[color:var(--border-strong)] border border-[color:var(--border-strong)] min-w-0">
+              {stats.map((s, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative bg-card p-5 md:p-7 min-w-0 transition-colors duration-500 hover:bg-surface-soft/60"
+                >
+                  <span className="absolute top-3 right-4 text-[10px] tracking-[0.3em] text-steel/60 font-mono">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <div className="font-display text-base md:text-xl lg:text-2xl font-semibold text-aqua-deep leading-[1.15] tracking-tight min-w-0 break-words">
+                    {Array.isArray(s.v) ? s.v.map((line, idx) => (
+                      <span key={idx} className="block">{line}</span>
+                    )) : s.v}
+                  </div>
+
+                  <div className="mt-3 w-8 h-px bg-aqua/70 transition-all duration-500 group-hover:w-14" />
+
+                  <div className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-graphite mt-3 leading-[1.6] min-w-0 break-words font-medium">
+                    {s.l.map((line, idx) => (
+                      <span key={idx} className="block">{line}</span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
