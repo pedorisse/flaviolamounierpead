@@ -36,23 +36,23 @@ export function Hero() {
           transition={{ duration: 1.4, delay: 0.3 }}
           className="space-y-8 max-w-4xl translate-y-[15vh]"
         >
-          <div className="flex items-center gap-3 text-aqua text-xs uppercase tracking-[0.4em]">
-            <span className="relative w-8 h-px bg-aqua overflow-hidden">
-              <span className="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-aqua animate-travel-line" />
+          <div className="flex items-center gap-3 text-aqua-glow text-[11px] uppercase tracking-[0.4em] font-semibold">
+            <span className="relative w-8 h-px bg-aqua-glow overflow-hidden">
+              <span className="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-aqua-glow animate-travel-line" />
             </span>
             Politejo · Infraestrutura Hídrica
           </div>
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extralight leading-[1.05] text-balance text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-            A tubulação PEAD por trás das <span className="text-aqua italic font-thin">grandes obras de saneamento</span> do Brasil.
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-[1.05] text-balance text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+            A tubulação PEAD por trás das <span className="text-aqua-glow italic">grandes obras de saneamento</span> do Brasil.
           </h1>
-          <p className="text-base md:text-lg text-white/85 max-w-2xl font-light leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)]">
+          <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)]">
             Tubos PEAD de alto desempenho para saneamento, adução, drenagem e emissários. Soluções desenhadas para durar décadas — com eficiência hídrica, segurança operacional e menor impacto ao longo da vida útil das redes.
           </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <a href="#projetos" className="group relative px-10 py-4 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-medium overflow-hidden">
+          <div className="flex flex-wrap gap-3 pt-3">
+            <a href="#projetos" className="group relative px-8 py-3.5 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden">
               <span className="relative z-10">Ver Soluções</span>
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-medium">Ver Soluções</span>
+              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Ver Soluções</span>
             </a>
           </div>
         </motion.div>
