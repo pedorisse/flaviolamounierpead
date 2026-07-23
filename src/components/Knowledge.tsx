@@ -16,7 +16,7 @@ type Item = { id: number; title: string; subtitle: string; cat: F[]; tags?: stri
 const items: Item[] = [
   { id: 1, title: "Redes adutoras em PEAD", subtitle: "TRANSPORTE DE ÁGUA EM GRANDES DISTÂNCIAS", cat: ["Tubos PEAD"], tags: ["ADUÇÃO", "PEAD", "GRANDE ESCALA"], src: tecnologia.url },
   { id: 2, title: "Travessias em MND", subtitle: "INSTALAÇÃO SEM INTERVENÇÕES DESTRUTIVAS", cat: ["Tubos PEAD"], tags: ["MND", "PEAD", "INFRAESTRUTURA"], src: travessiasMnd.url },
-  { id: 3, title: "Coletores de esgoto", subtitle: "ROBUSTEZ PARA SISTEMAS CRÍTICOS", cat: ["Saneamento"], tags: ["ESGOTO", "SANEAMENTO", "DURABILIDADE"], src: coletores.url },
+  { id: 3, title: "Coletores de esgoto", subtitle: "ROBUSTEZ PARA SISTEMAS CRÍTICOS", cat: ["Saneamento"], tags: ["ESGOTO", "SANEAMENTO", "DURABILIDADE"], src: tuboAzulVala.url },
 ];
 
 export function Knowledge() {
