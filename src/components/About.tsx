@@ -16,26 +16,26 @@ function Counter({ value, suffix = "+" }: { value: number; suffix?: string }) {
 const differentials = [
   {
     n: "01",
-    title: "SOLUÇÕES TERMOPLÁSTICAS",
-    lines: ["PARA REDES DE", "INFRAESTRUTURA"],
+    title: "CONHECIMENTO TÉCNICO",
+    lines: ["SOLUÇÕES TERMOPLÁSTICAS", "APLICADAS A REDES DE", "INFRAESTRUTURA"],
     Icon: Layers,
   },
   {
     n: "02",
-    title: "LÍDER",
-    lines: ["NAS MAIORES", "COMPANHIAS DE", "SANEAMENTO"],
+    title: "EXPERIÊNCIA DE CAMPO",
+    lines: ["ATUAÇÃO PRÓXIMA A OBRAS,", "EQUIPES TÉCNICAS E", "SISTEMAS DE SANEAMENTO"],
     Icon: Award,
   },
   {
     n: "03",
-    title: "PRESENÇA",
-    lines: ["NOS MAIORES PROJETOS", "DE TRATAMENTO DE ÁGUA", "E ESGOTO DO BRASIL"],
+    title: "GRANDES PROJETOS",
+    lines: ["PARTICIPAÇÃO EM PROJETOS", "DE ÁGUA, ESGOTO E", "SEGURANÇA HÍDRICA"],
     Icon: MapPin,
   },
   {
     n: "04",
-    title: "REFERÊNCIA",
-    lines: ["EM TUBULAÇÕES PEAD", "PARA INFRAESTRUTURA"],
+    title: "VISÃO INTEGRADA",
+    lines: ["CONEXÃO ENTRE ESPECIFICAÇÃO,", "PRODUTO, LOGÍSTICA E", "EXECUÇÃO DA OBRA"],
     Icon: BadgeCheck,
   },
 ];
@@ -52,11 +52,11 @@ export function About() {
           className="md:col-span-5 relative"
         >
           <div className="relative aspect-[3/4] overflow-hidden">
-            <img src={portrait} alt="Politejo — infraestrutura em tubos PEAD" className="w-full h-full object-cover" loading="lazy" />
+            <img src={portrait} alt="Flávio Lamounier — infraestrutura hídrica e tubos PEAD" className="w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-0 scrim-media" />
             <div className="absolute bottom-0 left-0 right-0 p-6 border-l-2 border-aqua">
-              <div className="text-aqua-glow text-[10px] uppercase tracking-[0.3em] mb-1">Tubos PEAD · Saneamento · Infraestrutura</div>
-              <div className="font-display text-2xl text-white">Politejo</div>
+              <div className="text-aqua-glow text-[10px] uppercase tracking-[0.3em] mb-1">Infraestrutura Hídrica · Saneamento · PEAD</div>
+              <div className="font-display text-2xl text-white">Flávio Lamounier</div>
             </div>
           </div>
           <div className="absolute -top-4 -right-4 w-32 h-32 border border-aqua/20 -z-10" />
@@ -70,16 +70,16 @@ export function About() {
             viewport={{ once: true }}
           >
             <div className="text-aqua-deep text-[11px] uppercase tracking-[0.4em] mb-5 flex items-center gap-3">
-              <span className="w-8 h-px bg-aqua-deep" />Sobre a Politejo
+              <span className="w-8 h-px bg-aqua-deep" />Sobre Flávio Lamounier
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-light leading-[1.1] text-balance text-foreground">
-              Infraestrutura hídrica<br/>
-              <span className="italic text-aqua">construída para durar.</span>
+              Experiência técnica construída<br/>
+              <span className="italic text-aqua">em grandes projetos.</span>
             </h2>
             <div className="mt-6 space-y-4 text-graphite text-base md:text-[17px] leading-[1.75] max-w-[60ch]">
-              <p><span className="text-foreground font-medium">Referência nacional</span> na produção e extrusão de tubos em PEAD para infraestrutura, saneamento e sistemas críticos de transporte de água, esgoto e outros recursos essenciais.</p>
-              <p>Soluções desenvolvidas para grandes demandas operacionais, com foco em longa vida útil, confiabilidade das redes e redução de intervenções ao longo do ciclo dos sistemas.</p>
-              <p>Tecnologia aplicada a redes que sustentam cidades — do coletor de esgoto à adutora de larga escala — com o rigor técnico que projetos de longo prazo exigem.</p>
+              <p><span className="text-foreground font-medium">Flávio Lamounier</span> atua na conexão entre engenharia, produto e obra, participando de projetos de infraestrutura hídrica, saneamento e sistemas críticos em diferentes regiões do Brasil.</p>
+              <p>Sua trajetória reúne experiência em campo, relacionamento com grandes operações de saneamento e conhecimento técnico aplicado à especificação de soluções em PEAD para projetos de alta complexidade.</p>
+              <p>Do planejamento à execução, sua atuação é orientada pela confiabilidade das redes, pela durabilidade dos sistemas e pelas demandas reais de cada obra.</p>
             </div>
           </motion.div>
 
@@ -87,7 +87,7 @@ export function About() {
             <div className="flex items-center gap-4 mb-6">
               <span className="w-8 h-px bg-aqua" />
               <span className="text-[11px] uppercase tracking-[0.4em] text-aqua-deep font-semibold">
-                Diferenciais Institucionais
+                Diferenciais
               </span>
               <span className="text-[10px] tracking-[0.3em] text-steel/70 font-mono">04 / 04</span>
             </div>

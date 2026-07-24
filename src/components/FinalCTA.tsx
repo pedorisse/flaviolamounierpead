@@ -14,14 +14,14 @@ export function FinalCTA() {
             transition={{ duration: 1.2 }} viewport={{ once: true }}
             className="font-display text-3xl md:text-5xl lg:text-6xl font-light leading-[1.1] text-balance text-foreground"
           >
-            A infraestrutura do futuro começa na tubulação certa.
+            A infraestrutura do futuro começa na solução certa.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.4 }} viewport={{ once: true }}
             className="font-body text-base md:text-lg text-graphite text-balance max-w-2xl leading-relaxed"
           >
-            Tubos PEAD para saneamento, adução, drenagem e emissários. Fale com a Politejo para especificar a solução mais adequada ao seu projeto.
+            Fale com Flávio Lamounier sobre soluções em PEAD, saneamento, adução, drenagem e projetos de infraestrutura hídrica.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -29,20 +29,20 @@ export function FinalCTA() {
             className="flex flex-wrap items-center justify-center gap-3 pt-3"
           >
             <a href="#" className="group relative px-8 py-3.5 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden">
-              <span className="relative z-10">Falar com a Politejo</span>
+              <span className="relative z-10">Falar com Flávio</span>
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Falar com a Politejo</span>
+              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Falar com Flávio</span>
             </a>
             <a href="#projetos" className="px-8 py-3.5 border border-[color:var(--border-strong)] text-aqua-deep uppercase tracking-[0.25em] text-xs font-semibold hover:border-aqua hover:bg-surface-muted transition-colors">
-              Ver Soluções
+              Ver Projetos
             </a>
           </motion.div>
         </div>
       </div>
 
       <footer className="bg-surface-dark py-5 px-6 md:px-16 flex flex-wrap gap-3 justify-between items-center text-[10px] uppercase tracking-[0.4em] text-white/70">
-        <div>Politejo · Infraestrutura Hídrica</div>
-        <div className="text-aqua-glow">PEAD · Saneamento · Sustentabilidade</div>
+        <div>Flávio Lamounier · Infraestrutura Hídrica</div>
+        <div className="text-aqua-glow">PEAD · Saneamento · Soluções Técnicas</div>
       </footer>
     </section>
   );
