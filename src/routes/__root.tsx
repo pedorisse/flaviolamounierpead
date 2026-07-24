@@ -77,7 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "robots", content: "noindex, nofollow, noarchive" },
       { title: "Flávio Lamounier | Infraestrutura Hídrica e Soluções em PEAD" },
+
       { name: "description", content: "Portfólio técnico de Flávio Lamounier, com atuação em infraestrutura hídrica, saneamento, tubulações PEAD e grandes projetos de água e esgoto." },
       { name: "author", content: "Flávio Lamounier" },
       { property: "og:title", content: "Flávio Lamounier | Infraestrutura Hídrica e Soluções em PEAD" },
