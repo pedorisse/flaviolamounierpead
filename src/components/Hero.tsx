@@ -24,7 +24,7 @@ export function Hero() {
         style={{ transform: `scale(1.1) translate(${pos.x * -15}px, ${pos.y * -15}px)` }}
         src={drone.url}
       />
-      {/* Dark green overlay for legibility — Politejo institutional tint */}
+      {/* Dark green overlay for legibility — institutional tint */}
       <div className="absolute inset-0 scrim-hero" />
       <div className="absolute inset-0 scrim-hero-grad" />
       <div className="absolute inset-0 scrim-hero-vignette" />
@@ -37,16 +37,16 @@ export function Hero() {
           className="space-y-8 max-w-4xl translate-y-[15vh]"
         >
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-[1.05] text-balance text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-            A tubulação PEAD por trás das <span className="text-aqua-glow italic">grandes obras de saneamento</span> do Brasil.
+            Experiência técnica por trás das <span className="text-aqua-glow italic">grandes obras de saneamento</span> do Brasil.
           </h1>
           <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)]">
-            Tubos PEAD de alto desempenho para saneamento, adução, drenagem e emissários. Soluções desenhadas para durar décadas — com eficiência hídrica, segurança operacional e menor impacto ao longo da vida útil das redes.
+            Flávio Lamounier — especialista em soluções para infraestrutura hídrica, saneamento e tubulações PEAD, com atuação em projetos críticos de longa escala em diferentes regiões do Brasil.
           </p>
           <div className="flex flex-wrap gap-3 pt-3">
             <a href="#projetos" className="group relative px-8 py-3.5 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden">
-              <span className="relative z-10">Ver Soluções</span>
+              <span className="relative z-10">Ver Projetos</span>
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Ver Soluções</span>
+              <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Ver Projetos</span>
             </a>
           </div>
         </motion.div>

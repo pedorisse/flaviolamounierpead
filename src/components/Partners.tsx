@@ -55,10 +55,10 @@ export function Partners() {
       >
         <div className="relative grid md:grid-cols-12 gap-10 md:gap-14 md:pt-4">
           <div className="md:col-span-5 space-y-5">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-aqua-deep">Linha PEAD · Infraestrutura</div>
-            <div className="font-display text-4xl md:text-6xl font-light tracking-tight text-foreground">Politejo</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-aqua-deep">Atuação Técnica · Infraestrutura</div>
+            <div className="font-display text-4xl md:text-6xl font-light tracking-tight text-foreground">Soluções em PEAD</div>
             <p className="text-graphite text-base md:text-[17px] leading-relaxed max-w-[46ch]">
-              Portfólio dedicado a redes de saneamento, adução, drenagem e emissários, com foco em durabilidade e eficiência hídrica.
+              Experiência aplicada a redes de saneamento, adução, drenagem e emissários, com foco em durabilidade, eficiência hídrica e desempenho em sistemas críticos.
             </p>
             <div className="w-12 h-px bg-aqua" />
           </div>

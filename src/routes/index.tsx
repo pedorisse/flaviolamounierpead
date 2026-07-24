@@ -10,10 +10,10 @@ import { FinalCTA } from "@/components/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Politejo · Infraestrutura Hídrica, Saneamento e Sustentabilidade" },
-      { name: "description", content: "Politejo desenvolve soluções técnicas para infraestrutura hídrica, saneamento e eficiência de recursos, com foco em durabilidade, sustentabilidade e impacto positivo nas cidades." },
-      { property: "og:title", content: "Politejo · Infraestrutura Hídrica, Saneamento e Sustentabilidade" },
-      { property: "og:description", content: "Politejo desenvolve soluções técnicas para infraestrutura hídrica, saneamento e eficiência de recursos, com foco em durabilidade, sustentabilidade e impacto positivo nas cidades." },
+      { title: "Flávio Lamounier | Infraestrutura Hídrica e Soluções em PEAD" },
+      { name: "description", content: "Portfólio técnico de Flávio Lamounier, com atuação em infraestrutura hídrica, saneamento, tubulações PEAD e grandes projetos de água e esgoto." },
+      { property: "og:title", content: "Flávio Lamounier | Infraestrutura Hídrica e Soluções em PEAD" },
+      { property: "og:description", content: "Portfólio técnico de Flávio Lamounier, com atuação em infraestrutura hídrica, saneamento, tubulações PEAD e grandes projetos de água e esgoto." },
       { property: "og:type", content: "website" },
     ],
   }),
