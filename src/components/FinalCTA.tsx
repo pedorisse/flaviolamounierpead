@@ -26,15 +26,18 @@ export function FinalCTA() {
           <motion.div
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }} viewport={{ once: true }}
-            className="flex flex-wrap items-center justify-center gap-3 pt-3"
+            className="flex items-center justify-center pt-3 w-full"
           >
-            <a href="#" className="group relative px-8 py-3.5 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden">
+            <a
+              href="https://wa.me/5511983894242?text=Ol%C3%A1%2C%20Fl%C3%A1vio.%20Tenho%20interesse%20em%20uma%20solu%C3%A7%C3%A3o%20com%20tubos%20PEAD."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Falar com Flávio no WhatsApp"
+              className="group relative inline-block px-8 py-3.5 bg-aqua text-primary-foreground uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden cursor-pointer w-full max-w-xs sm:w-auto text-center"
+            >
               <span className="relative z-10">Falar com Flávio</span>
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="absolute inset-0 flex items-center justify-center text-background opacity-0 group-hover:opacity-100 transition-opacity delay-200 uppercase tracking-[0.25em] text-xs font-semibold">Falar com Flávio</span>
-            </a>
-            <a href="#projetos" className="px-8 py-3.5 border border-[color:var(--border-strong)] text-aqua-deep uppercase tracking-[0.25em] text-xs font-semibold hover:border-aqua hover:bg-surface-muted transition-colors">
-              Ver Projetos
             </a>
           </motion.div>
         </div>
