@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProjetoPead7f42k9RouteImport } from './routes/projeto-pead-7f42k9'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ProjetoPead7f42k9Route = ProjetoPead7f42k9RouteImport.update({
+  id: '/projeto-pead-7f42k9',
+  path: '/projeto-pead-7f42k9',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projeto-pead-7f42k9': typeof ProjetoPead7f42k9Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projeto-pead-7f42k9': typeof ProjetoPead7f42k9Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projeto-pead-7f42k9': typeof ProjetoPead7f42k9Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/projeto-pead-7f42k9'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/projeto-pead-7f42k9'
+  id: '__root__' | '/' | '/projeto-pead-7f42k9'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjetoPead7f42k9Route: typeof ProjetoPead7f42k9Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/projeto-pead-7f42k9': {
+      id: '/projeto-pead-7f42k9'
+      path: '/projeto-pead-7f42k9'
+      fullPath: '/projeto-pead-7f42k9'
+      preLoaderRoute: typeof ProjetoPead7f42k9RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjetoPead7f42k9Route: ProjetoPead7f42k9Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
